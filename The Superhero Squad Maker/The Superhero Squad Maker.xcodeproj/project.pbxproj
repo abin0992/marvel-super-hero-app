@@ -24,6 +24,9 @@
 		16ABD2DC2B7A7F5200B14DFE /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2DB2B7A7F5200B14DFE /* HomeCoordinator.swift */; };
 		16ABD2E02B7A7FAF00B14DFE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2DF2B7A7FAF00B14DFE /* HomeView.swift */; };
 		16ABD2E22B7A7FDB00B14DFE /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 16ABD2E12B7A7FDB00B14DFE /* Swinject */; };
+		16ABD2E52B7A82B000B14DFE /* DependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2E42B7A82AF00B14DFE /* DependencyManager.swift */; };
+		16ABD2E82B7A82E400B14DFE /* CoordinatorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2E72B7A82E400B14DFE /* CoordinatorAssembly.swift */; };
+		16ABD2EA2B7A834C00B14DFE /* ResolverEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2E92B7A834C00B14DFE /* ResolverEnvironment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,9 @@
 		16ABD2D92B7A7F1400B14DFE /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		16ABD2DB2B7A7F5200B14DFE /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		16ABD2DF2B7A7FAF00B14DFE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		16ABD2E42B7A82AF00B14DFE /* DependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyManager.swift; sourceTree = "<group>"; };
+		16ABD2E72B7A82E400B14DFE /* CoordinatorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorAssembly.swift; sourceTree = "<group>"; };
+		16ABD2E92B7A834C00B14DFE /* ResolverEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverEnvironment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,7 @@
 		16ABD28C2B7A7BF900B14DFE /* The Superhero Squad Maker */ = {
 			isa = PBXGroup;
 			children = (
+				16ABD2E32B7A828400B14DFE /* Dependency Injection */,
 				16ABD2DD2B7A7F8100B14DFE /* Screens */,
 				16ABD2D82B7A7EFF00B14DFE /* Coordinators */,
 				16ABD2C32B7A7C3300B14DFE /* App */,
@@ -204,6 +211,24 @@
 				16ABD2DF2B7A7FAF00B14DFE /* HomeView.swift */,
 			);
 			path = HomeView;
+			sourceTree = "<group>";
+		};
+		16ABD2E32B7A828400B14DFE /* Dependency Injection */ = {
+			isa = PBXGroup;
+			children = (
+				16ABD2E62B7A82CA00B14DFE /* Coordinators */,
+				16ABD2E42B7A82AF00B14DFE /* DependencyManager.swift */,
+				16ABD2E92B7A834C00B14DFE /* ResolverEnvironment.swift */,
+			);
+			path = "Dependency Injection";
+			sourceTree = "<group>";
+		};
+		16ABD2E62B7A82CA00B14DFE /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				16ABD2E72B7A82E400B14DFE /* CoordinatorAssembly.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,11 +395,14 @@
 				16ABD2D32B7A7CEE00B14DFE /* HeroView.swift in Sources */,
 				16ABD28E2B7A7BF900B14DFE /* AppDelegate.swift in Sources */,
 				16ABD2D22B7A7CEE00B14DFE /* SquadView.swift in Sources */,
+				16ABD2E52B7A82B000B14DFE /* DependencyManager.swift in Sources */,
 				16ABD2DC2B7A7F5200B14DFE /* HomeCoordinator.swift in Sources */,
 				16ABD2D62B7A7ED900B14DFE /* ApplicationCoordinator.swift in Sources */,
 				16ABD2DA2B7A7F1400B14DFE /* Coordinator.swift in Sources */,
 				16ABD2CB2B7A7C8900B14DFE /* Image+Extensions.swift in Sources */,
+				16ABD2EA2B7A834C00B14DFE /* ResolverEnvironment.swift in Sources */,
 				16ABD2C92B7A7C8900B14DFE /* CGFloat+Extensions.swift in Sources */,
+				16ABD2E82B7A82E400B14DFE /* CoordinatorAssembly.swift in Sources */,
 				16ABD2902B7A7BF900B14DFE /* SceneDelegate.swift in Sources */,
 				16ABD2D12B7A7CEE00B14DFE /* SquadButton.swift in Sources */,
 			);

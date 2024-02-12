@@ -14,31 +14,29 @@ final class ApplicationCoordinator: Coordinator {
 
     private var childCoordinators = [Coordinator]()
 
-  //  private let resolver: Resolver
+    private let resolver: Resolver
     private let window: UIWindow
 
     init(
-     //   resolver: Resolver,
+        resolver: Resolver,
         window: UIWindow
     ) {
-     //   self.resolver = resolver
+        self.resolver = resolver
         self.window = window
     }
 
     func start() {
-//        let resolverEnvironment = ResolverEnvironment()
-//
-//        guard let homeCoordinator = resolver.resolve(
-//            HomeCoordinator.self,
-//            argument: resolverEnvironment
-//        ) else {
-//            return
-//        }
-//
-//        homeCoordinator.start()
+        let resolverEnvironment = ResolverEnvironment()
 
-        let homeCoordinator = HomeCoordinator()
+        guard let homeCoordinator = resolver.resolve(
+            HomeCoordinator.self,
+            argument: resolverEnvironment
+        ) else {
+            return
+        }
+
         homeCoordinator.start()
+
         childCoordinators = [homeCoordinator]
         window.rootViewController = homeCoordinator.rootViewController
     }

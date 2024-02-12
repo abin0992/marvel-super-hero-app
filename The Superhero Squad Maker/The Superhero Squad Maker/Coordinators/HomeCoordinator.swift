@@ -14,16 +14,16 @@ final class HomeCoordinator: Coordinator {
     var rootViewController: UINavigationController = UINavigationController()
     private var cancellables = Set<AnyCancellable>()
 
-//    private let resolver: Resolver
-//    private let resolverEnvironment: ResolverEnvironment
-//
-//    init(
-//        resolver: Resolver,
-//        resolverEnvironment: ResolverEnvironment
-//    ) {
-//        self.resolver = resolver
-//        self.resolverEnvironment = resolverEnvironment
-//    }
+    private let resolver: Resolver
+    private let resolverEnvironment: ResolverEnvironment
+
+    init(
+        resolver: Resolver,
+        resolverEnvironment: ResolverEnvironment
+    ) {
+        self.resolver = resolver
+        self.resolverEnvironment = resolverEnvironment
+    }
 
     func start() {
         displayHomeView()
