@@ -12,8 +12,6 @@
 		16ABD2972B7A7BFA00B14DFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16ABD2962B7A7BFA00B14DFE /* Assets.xcassets */; };
 		16ABD29A2B7A7BFA00B14DFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16ABD2982B7A7BFA00B14DFE /* LaunchScreen.storyboard */; };
 		16ABD2A52B7A7BFA00B14DFE /* The_Superhero_Squad_MakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2A42B7A7BFA00B14DFE /* The_Superhero_Squad_MakerTests.swift */; };
-		16ABD2AF2B7A7BFA00B14DFE /* The_Superhero_Squad_MakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2AE2B7A7BFA00B14DFE /* The_Superhero_Squad_MakerUITests.swift */; };
-		16ABD2B12B7A7BFA00B14DFE /* The_Superhero_Squad_MakerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2B02B7A7BFA00B14DFE /* The_Superhero_Squad_MakerUITestsLaunchTests.swift */; };
 		16ABD2C22B7A7C3000B14DFE /* TextContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2C12B7A7C3000B14DFE /* TextContent.swift */; };
 		16ABD2C92B7A7C8900B14DFE /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2C62B7A7C8900B14DFE /* CGFloat+Extensions.swift */; };
 		16ABD2CA2B7A7C8900B14DFE /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2C72B7A7C8900B14DFE /* Color+Extensions.swift */; };
@@ -21,6 +19,11 @@
 		16ABD2D12B7A7CEE00B14DFE /* SquadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2CE2B7A7CEE00B14DFE /* SquadButton.swift */; };
 		16ABD2D22B7A7CEE00B14DFE /* SquadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2CF2B7A7CEE00B14DFE /* SquadView.swift */; };
 		16ABD2D32B7A7CEE00B14DFE /* HeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2D02B7A7CEE00B14DFE /* HeroView.swift */; };
+		16ABD2D62B7A7ED900B14DFE /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2D52B7A7ED900B14DFE /* ApplicationCoordinator.swift */; };
+		16ABD2DA2B7A7F1400B14DFE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2D92B7A7F1400B14DFE /* Coordinator.swift */; };
+		16ABD2DC2B7A7F5200B14DFE /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2DB2B7A7F5200B14DFE /* HomeCoordinator.swift */; };
+		16ABD2E02B7A7FAF00B14DFE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2DF2B7A7FAF00B14DFE /* HomeView.swift */; };
+		16ABD2E22B7A7FDB00B14DFE /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 16ABD2E12B7A7FDB00B14DFE /* Swinject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +53,6 @@
 		16ABD2A02B7A7BFA00B14DFE /* The Superhero Squad MakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The Superhero Squad MakerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16ABD2A42B7A7BFA00B14DFE /* The_Superhero_Squad_MakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Superhero_Squad_MakerTests.swift; sourceTree = "<group>"; };
 		16ABD2AA2B7A7BFA00B14DFE /* The Superhero Squad MakerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The Superhero Squad MakerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		16ABD2AE2B7A7BFA00B14DFE /* The_Superhero_Squad_MakerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Superhero_Squad_MakerUITests.swift; sourceTree = "<group>"; };
-		16ABD2B02B7A7BFA00B14DFE /* The_Superhero_Squad_MakerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Superhero_Squad_MakerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		16ABD2C12B7A7C3000B14DFE /* TextContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextContent.swift; sourceTree = "<group>"; };
 		16ABD2C62B7A7C8900B14DFE /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 		16ABD2C72B7A7C8900B14DFE /* Color+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
@@ -59,6 +60,10 @@
 		16ABD2CE2B7A7CEE00B14DFE /* SquadButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquadButton.swift; sourceTree = "<group>"; };
 		16ABD2CF2B7A7CEE00B14DFE /* SquadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquadView.swift; sourceTree = "<group>"; };
 		16ABD2D02B7A7CEE00B14DFE /* HeroView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroView.swift; sourceTree = "<group>"; };
+		16ABD2D52B7A7ED900B14DFE /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		16ABD2D92B7A7F1400B14DFE /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		16ABD2DB2B7A7F5200B14DFE /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		16ABD2DF2B7A7FAF00B14DFE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16ABD2E22B7A7FDB00B14DFE /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +97,6 @@
 			children = (
 				16ABD28C2B7A7BF900B14DFE /* The Superhero Squad Maker */,
 				16ABD2A32B7A7BFA00B14DFE /* The Superhero Squad MakerTests */,
-				16ABD2AD2B7A7BFA00B14DFE /* The Superhero Squad MakerUITests */,
 				16ABD28B2B7A7BF900B14DFE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,6 +114,8 @@
 		16ABD28C2B7A7BF900B14DFE /* The Superhero Squad Maker */ = {
 			isa = PBXGroup;
 			children = (
+				16ABD2DD2B7A7F8100B14DFE /* Screens */,
+				16ABD2D82B7A7EFF00B14DFE /* Coordinators */,
 				16ABD2C32B7A7C3300B14DFE /* App */,
 				16ABD2C52B7A7C6700B14DFE /* Extensions */,
 				16ABD29B2B7A7BFA00B14DFE /* Info.plist */,
@@ -125,15 +132,6 @@
 				16ABD2A42B7A7BFA00B14DFE /* The_Superhero_Squad_MakerTests.swift */,
 			);
 			path = "The Superhero Squad MakerTests";
-			sourceTree = "<group>";
-		};
-		16ABD2AD2B7A7BFA00B14DFE /* The Superhero Squad MakerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				16ABD2AE2B7A7BFA00B14DFE /* The_Superhero_Squad_MakerUITests.swift */,
-				16ABD2B02B7A7BFA00B14DFE /* The_Superhero_Squad_MakerUITestsLaunchTests.swift */,
-			);
-			path = "The Superhero Squad MakerUITests";
 			sourceTree = "<group>";
 		};
 		16ABD2BD2B7A7C0200B14DFE /* UIComponents */ = {
@@ -159,6 +157,7 @@
 			children = (
 				16ABD28D2B7A7BF900B14DFE /* AppDelegate.swift */,
 				16ABD28F2B7A7BF900B14DFE /* SceneDelegate.swift */,
+				16ABD2D52B7A7ED900B14DFE /* ApplicationCoordinator.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -182,6 +181,31 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		16ABD2D82B7A7EFF00B14DFE /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				16ABD2D92B7A7F1400B14DFE /* Coordinator.swift */,
+				16ABD2DB2B7A7F5200B14DFE /* HomeCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		16ABD2DD2B7A7F8100B14DFE /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				16ABD2DE2B7A7F9000B14DFE /* HomeView */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		16ABD2DE2B7A7F9000B14DFE /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				16ABD2DF2B7A7FAF00B14DFE /* HomeView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -199,6 +223,9 @@
 			dependencies = (
 			);
 			name = "The Superhero Squad Maker";
+			packageProductDependencies = (
+				16ABD2E12B7A7FDB00B14DFE /* Swinject */,
+			);
 			productName = "The Superhero Squad Maker";
 			productReference = 16ABD28A2B7A7BF900B14DFE /* The Superhero Squad Maker.app */;
 			productType = "com.apple.product-type.application";
@@ -271,6 +298,9 @@
 				Base,
 			);
 			mainGroup = 16ABD2812B7A7BF900B14DFE;
+			packageReferences = (
+				16ABD2D72B7A7EF600B14DFE /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = 16ABD28B2B7A7BF900B14DFE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -336,9 +366,13 @@
 			files = (
 				16ABD2CA2B7A7C8900B14DFE /* Color+Extensions.swift in Sources */,
 				16ABD2C22B7A7C3000B14DFE /* TextContent.swift in Sources */,
+				16ABD2E02B7A7FAF00B14DFE /* HomeView.swift in Sources */,
 				16ABD2D32B7A7CEE00B14DFE /* HeroView.swift in Sources */,
 				16ABD28E2B7A7BF900B14DFE /* AppDelegate.swift in Sources */,
 				16ABD2D22B7A7CEE00B14DFE /* SquadView.swift in Sources */,
+				16ABD2DC2B7A7F5200B14DFE /* HomeCoordinator.swift in Sources */,
+				16ABD2D62B7A7ED900B14DFE /* ApplicationCoordinator.swift in Sources */,
+				16ABD2DA2B7A7F1400B14DFE /* Coordinator.swift in Sources */,
 				16ABD2CB2B7A7C8900B14DFE /* Image+Extensions.swift in Sources */,
 				16ABD2C92B7A7C8900B14DFE /* CGFloat+Extensions.swift in Sources */,
 				16ABD2902B7A7BF900B14DFE /* SceneDelegate.swift in Sources */,
@@ -358,8 +392,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16ABD2B12B7A7BFA00B14DFE /* The_Superhero_Squad_MakerUITestsLaunchTests.swift in Sources */,
-				16ABD2AF2B7A7BFA00B14DFE /* The_Superhero_Squad_MakerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,7 +553,7 @@
 				INFOPLIST_FILE = "The Superhero Squad Maker/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -549,7 +581,7 @@
 				INFOPLIST_FILE = "The Superhero Squad Maker/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -677,6 +709,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		16ABD2D72B7A7EF600B14DFE /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		16ABD2E12B7A7FDB00B14DFE /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16ABD2D72B7A7EF600B14DFE /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 16ABD2822B7A7BF900B14DFE /* Project object */;
 }
