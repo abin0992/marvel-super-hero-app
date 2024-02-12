@@ -1,10 +1,10 @@
 import SwiftUI
 
-struct HeroView: View {
+struct HeroListItemView: View {
 
     var body: some View {
         HStack {
-            Image("placeholder")
+            Image("marvel-logo-square")
                 .resizable()
                 .scaledToFill()
                 .clipShape(Circle())

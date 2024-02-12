@@ -24,3 +24,7 @@ struct SquadView: View {
         .frame(maxWidth: .xLarge)
     }
 }
+
+#Preview {
+    SquadView()
+}
