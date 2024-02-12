@@ -1,0 +1,682 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16ABD28E2B7A7BF900B14DFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD28D2B7A7BF900B14DFE /* AppDelegate.swift */; };
+		16ABD2902B7A7BF900B14DFE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD28F2B7A7BF900B14DFE /* SceneDelegate.swift */; };
+		16ABD2972B7A7BFA00B14DFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16ABD2962B7A7BFA00B14DFE /* Assets.xcassets */; };
+		16ABD29A2B7A7BFA00B14DFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16ABD2982B7A7BFA00B14DFE /* LaunchScreen.storyboard */; };
+		16ABD2A52B7A7BFA00B14DFE /* The_Superhero_Squad_MakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2A42B7A7BFA00B14DFE /* The_Superhero_Squad_MakerTests.swift */; };
+		16ABD2AF2B7A7BFA00B14DFE /* The_Superhero_Squad_MakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2AE2B7A7BFA00B14DFE /* The_Superhero_Squad_MakerUITests.swift */; };
+		16ABD2B12B7A7BFA00B14DFE /* The_Superhero_Squad_MakerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2B02B7A7BFA00B14DFE /* The_Superhero_Squad_MakerUITestsLaunchTests.swift */; };
+		16ABD2C22B7A7C3000B14DFE /* TextContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2C12B7A7C3000B14DFE /* TextContent.swift */; };
+		16ABD2C92B7A7C8900B14DFE /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2C62B7A7C8900B14DFE /* CGFloat+Extensions.swift */; };
+		16ABD2CA2B7A7C8900B14DFE /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2C72B7A7C8900B14DFE /* Color+Extensions.swift */; };
+		16ABD2CB2B7A7C8900B14DFE /* Image+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2C82B7A7C8900B14DFE /* Image+Extensions.swift */; };
+		16ABD2D12B7A7CEE00B14DFE /* SquadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2CE2B7A7CEE00B14DFE /* SquadButton.swift */; };
+		16ABD2D22B7A7CEE00B14DFE /* SquadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2CF2B7A7CEE00B14DFE /* SquadView.swift */; };
+		16ABD2D32B7A7CEE00B14DFE /* HeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2D02B7A7CEE00B14DFE /* HeroView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		16ABD2A12B7A7BFA00B14DFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16ABD2822B7A7BF900B14DFE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16ABD2892B7A7BF900B14DFE;
+			remoteInfo = "The Superhero Squad Maker";
+		};
+		16ABD2AB2B7A7BFA00B14DFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16ABD2822B7A7BF900B14DFE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16ABD2892B7A7BF900B14DFE;
+			remoteInfo = "The Superhero Squad Maker";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		16ABD28A2B7A7BF900B14DFE /* The Superhero Squad Maker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Superhero Squad Maker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		16ABD28D2B7A7BF900B14DFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		16ABD28F2B7A7BF900B14DFE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		16ABD2962B7A7BFA00B14DFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		16ABD2992B7A7BFA00B14DFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		16ABD29B2B7A7BFA00B14DFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16ABD2A02B7A7BFA00B14DFE /* The Superhero Squad MakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The Superhero Squad MakerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		16ABD2A42B7A7BFA00B14DFE /* The_Superhero_Squad_MakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Superhero_Squad_MakerTests.swift; sourceTree = "<group>"; };
+		16ABD2AA2B7A7BFA00B14DFE /* The Superhero Squad MakerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The Superhero Squad MakerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		16ABD2AE2B7A7BFA00B14DFE /* The_Superhero_Squad_MakerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Superhero_Squad_MakerUITests.swift; sourceTree = "<group>"; };
+		16ABD2B02B7A7BFA00B14DFE /* The_Superhero_Squad_MakerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Superhero_Squad_MakerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		16ABD2C12B7A7C3000B14DFE /* TextContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextContent.swift; sourceTree = "<group>"; };
+		16ABD2C62B7A7C8900B14DFE /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
+		16ABD2C72B7A7C8900B14DFE /* Color+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		16ABD2C82B7A7C8900B14DFE /* Image+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+Extensions.swift"; sourceTree = "<group>"; };
+		16ABD2CE2B7A7CEE00B14DFE /* SquadButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquadButton.swift; sourceTree = "<group>"; };
+		16ABD2CF2B7A7CEE00B14DFE /* SquadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquadView.swift; sourceTree = "<group>"; };
+		16ABD2D02B7A7CEE00B14DFE /* HeroView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16ABD2872B7A7BF900B14DFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16ABD29D2B7A7BFA00B14DFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16ABD2A72B7A7BFA00B14DFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16ABD2812B7A7BF900B14DFE = {
+			isa = PBXGroup;
+			children = (
+				16ABD28C2B7A7BF900B14DFE /* The Superhero Squad Maker */,
+				16ABD2A32B7A7BFA00B14DFE /* The Superhero Squad MakerTests */,
+				16ABD2AD2B7A7BFA00B14DFE /* The Superhero Squad MakerUITests */,
+				16ABD28B2B7A7BF900B14DFE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		16ABD28B2B7A7BF900B14DFE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16ABD28A2B7A7BF900B14DFE /* The Superhero Squad Maker.app */,
+				16ABD2A02B7A7BFA00B14DFE /* The Superhero Squad MakerTests.xctest */,
+				16ABD2AA2B7A7BFA00B14DFE /* The Superhero Squad MakerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		16ABD28C2B7A7BF900B14DFE /* The Superhero Squad Maker */ = {
+			isa = PBXGroup;
+			children = (
+				16ABD2C32B7A7C3300B14DFE /* App */,
+				16ABD2C52B7A7C6700B14DFE /* Extensions */,
+				16ABD29B2B7A7BFA00B14DFE /* Info.plist */,
+				16ABD2BE2B7A7C0900B14DFE /* Models */,
+				16ABD2C42B7A7C4500B14DFE /* Resources */,
+				16ABD2BD2B7A7C0200B14DFE /* UIComponents */,
+			);
+			path = "The Superhero Squad Maker";
+			sourceTree = "<group>";
+		};
+		16ABD2A32B7A7BFA00B14DFE /* The Superhero Squad MakerTests */ = {
+			isa = PBXGroup;
+			children = (
+				16ABD2A42B7A7BFA00B14DFE /* The_Superhero_Squad_MakerTests.swift */,
+			);
+			path = "The Superhero Squad MakerTests";
+			sourceTree = "<group>";
+		};
+		16ABD2AD2B7A7BFA00B14DFE /* The Superhero Squad MakerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				16ABD2AE2B7A7BFA00B14DFE /* The_Superhero_Squad_MakerUITests.swift */,
+				16ABD2B02B7A7BFA00B14DFE /* The_Superhero_Squad_MakerUITestsLaunchTests.swift */,
+			);
+			path = "The Superhero Squad MakerUITests";
+			sourceTree = "<group>";
+		};
+		16ABD2BD2B7A7C0200B14DFE /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				16ABD2D02B7A7CEE00B14DFE /* HeroView.swift */,
+				16ABD2CE2B7A7CEE00B14DFE /* SquadButton.swift */,
+				16ABD2CF2B7A7CEE00B14DFE /* SquadView.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		16ABD2BE2B7A7C0900B14DFE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				16ABD2C12B7A7C3000B14DFE /* TextContent.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		16ABD2C32B7A7C3300B14DFE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				16ABD28D2B7A7BF900B14DFE /* AppDelegate.swift */,
+				16ABD28F2B7A7BF900B14DFE /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		16ABD2C42B7A7C4500B14DFE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				16ABD2982B7A7BFA00B14DFE /* LaunchScreen.storyboard */,
+				16ABD2962B7A7BFA00B14DFE /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		16ABD2C52B7A7C6700B14DFE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				16ABD2C62B7A7C8900B14DFE /* CGFloat+Extensions.swift */,
+				16ABD2C72B7A7C8900B14DFE /* Color+Extensions.swift */,
+				16ABD2C82B7A7C8900B14DFE /* Image+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		16ABD2892B7A7BF900B14DFE /* The Superhero Squad Maker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16ABD2B42B7A7BFA00B14DFE /* Build configuration list for PBXNativeTarget "The Superhero Squad Maker" */;
+			buildPhases = (
+				16ABD2862B7A7BF900B14DFE /* Sources */,
+				16ABD2872B7A7BF900B14DFE /* Frameworks */,
+				16ABD2882B7A7BF900B14DFE /* Resources */,
+				16ABD2D42B7A7D3D00B14DFE /* SwiftLint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "The Superhero Squad Maker";
+			productName = "The Superhero Squad Maker";
+			productReference = 16ABD28A2B7A7BF900B14DFE /* The Superhero Squad Maker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		16ABD29F2B7A7BFA00B14DFE /* The Superhero Squad MakerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16ABD2B72B7A7BFA00B14DFE /* Build configuration list for PBXNativeTarget "The Superhero Squad MakerTests" */;
+			buildPhases = (
+				16ABD29C2B7A7BFA00B14DFE /* Sources */,
+				16ABD29D2B7A7BFA00B14DFE /* Frameworks */,
+				16ABD29E2B7A7BFA00B14DFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16ABD2A22B7A7BFA00B14DFE /* PBXTargetDependency */,
+			);
+			name = "The Superhero Squad MakerTests";
+			productName = "The Superhero Squad MakerTests";
+			productReference = 16ABD2A02B7A7BFA00B14DFE /* The Superhero Squad MakerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		16ABD2A92B7A7BFA00B14DFE /* The Superhero Squad MakerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16ABD2BA2B7A7BFA00B14DFE /* Build configuration list for PBXNativeTarget "The Superhero Squad MakerUITests" */;
+			buildPhases = (
+				16ABD2A62B7A7BFA00B14DFE /* Sources */,
+				16ABD2A72B7A7BFA00B14DFE /* Frameworks */,
+				16ABD2A82B7A7BFA00B14DFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16ABD2AC2B7A7BFA00B14DFE /* PBXTargetDependency */,
+			);
+			name = "The Superhero Squad MakerUITests";
+			productName = "The Superhero Squad MakerUITests";
+			productReference = 16ABD2AA2B7A7BFA00B14DFE /* The Superhero Squad MakerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		16ABD2822B7A7BF900B14DFE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					16ABD2892B7A7BF900B14DFE = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					16ABD29F2B7A7BFA00B14DFE = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 16ABD2892B7A7BF900B14DFE;
+					};
+					16ABD2A92B7A7BFA00B14DFE = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 16ABD2892B7A7BF900B14DFE;
+					};
+				};
+			};
+			buildConfigurationList = 16ABD2852B7A7BF900B14DFE /* Build configuration list for PBXProject "The Superhero Squad Maker" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 16ABD2812B7A7BF900B14DFE;
+			productRefGroup = 16ABD28B2B7A7BF900B14DFE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				16ABD2892B7A7BF900B14DFE /* The Superhero Squad Maker */,
+				16ABD29F2B7A7BFA00B14DFE /* The Superhero Squad MakerTests */,
+				16ABD2A92B7A7BFA00B14DFE /* The Superhero Squad MakerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		16ABD2882B7A7BF900B14DFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16ABD29A2B7A7BFA00B14DFE /* LaunchScreen.storyboard in Resources */,
+				16ABD2972B7A7BFA00B14DFE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16ABD29E2B7A7BFA00B14DFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16ABD2A82B7A7BFA00B14DFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16ABD2D42B7A7D3D00B14DFE /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16ABD2862B7A7BF900B14DFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16ABD2CA2B7A7C8900B14DFE /* Color+Extensions.swift in Sources */,
+				16ABD2C22B7A7C3000B14DFE /* TextContent.swift in Sources */,
+				16ABD2D32B7A7CEE00B14DFE /* HeroView.swift in Sources */,
+				16ABD28E2B7A7BF900B14DFE /* AppDelegate.swift in Sources */,
+				16ABD2D22B7A7CEE00B14DFE /* SquadView.swift in Sources */,
+				16ABD2CB2B7A7C8900B14DFE /* Image+Extensions.swift in Sources */,
+				16ABD2C92B7A7C8900B14DFE /* CGFloat+Extensions.swift in Sources */,
+				16ABD2902B7A7BF900B14DFE /* SceneDelegate.swift in Sources */,
+				16ABD2D12B7A7CEE00B14DFE /* SquadButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16ABD29C2B7A7BFA00B14DFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16ABD2A52B7A7BFA00B14DFE /* The_Superhero_Squad_MakerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16ABD2A62B7A7BFA00B14DFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16ABD2B12B7A7BFA00B14DFE /* The_Superhero_Squad_MakerUITestsLaunchTests.swift in Sources */,
+				16ABD2AF2B7A7BFA00B14DFE /* The_Superhero_Squad_MakerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		16ABD2A22B7A7BFA00B14DFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16ABD2892B7A7BF900B14DFE /* The Superhero Squad Maker */;
+			targetProxy = 16ABD2A12B7A7BFA00B14DFE /* PBXContainerItemProxy */;
+		};
+		16ABD2AC2B7A7BFA00B14DFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16ABD2892B7A7BF900B14DFE /* The Superhero Squad Maker */;
+			targetProxy = 16ABD2AB2B7A7BFA00B14DFE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		16ABD2982B7A7BFA00B14DFE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16ABD2992B7A7BFA00B14DFE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		16ABD2B22B7A7BFA00B14DFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		16ABD2B32B7A7BFA00B14DFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		16ABD2B52B7A7BFA00B14DFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "The Superhero Squad Maker/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.abin.The-Superhero-Squad-Maker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		16ABD2B62B7A7BFA00B14DFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "The Superhero Squad Maker/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.abin.The-Superhero-Squad-Maker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		16ABD2B82B7A7BFA00B14DFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.abin.The-Superhero-Squad-MakerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/The Superhero Squad Maker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/The Superhero Squad Maker";
+			};
+			name = Debug;
+		};
+		16ABD2B92B7A7BFA00B14DFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.abin.The-Superhero-Squad-MakerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/The Superhero Squad Maker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/The Superhero Squad Maker";
+			};
+			name = Release;
+		};
+		16ABD2BB2B7A7BFA00B14DFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.abin.The-Superhero-Squad-MakerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "The Superhero Squad Maker";
+			};
+			name = Debug;
+		};
+		16ABD2BC2B7A7BFA00B14DFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.abin.The-Superhero-Squad-MakerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "The Superhero Squad Maker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16ABD2852B7A7BF900B14DFE /* Build configuration list for PBXProject "The Superhero Squad Maker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16ABD2B22B7A7BFA00B14DFE /* Debug */,
+				16ABD2B32B7A7BFA00B14DFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16ABD2B42B7A7BFA00B14DFE /* Build configuration list for PBXNativeTarget "The Superhero Squad Maker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16ABD2B52B7A7BFA00B14DFE /* Debug */,
+				16ABD2B62B7A7BFA00B14DFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16ABD2B72B7A7BFA00B14DFE /* Build configuration list for PBXNativeTarget "The Superhero Squad MakerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16ABD2B82B7A7BFA00B14DFE /* Debug */,
+				16ABD2B92B7A7BFA00B14DFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16ABD2BA2B7A7BFA00B14DFE /* Build configuration list for PBXNativeTarget "The Superhero Squad MakerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16ABD2BB2B7A7BFA00B14DFE /* Debug */,
+				16ABD2BC2B7A7BFA00B14DFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 16ABD2822B7A7BF900B14DFE /* Project object */;
+}
