@@ -41,7 +41,7 @@ class HomeViewModel: ObservableObject {
                 return
             }
         print(url)
-        let url1 = SquadUrlConfig.shared.fetchSquadList(offset: "0").url
+        let url1 = SquadUrlConfig.shared.fetchAllHeros(offset: "0").url
         print(url1)
         URLSession.shared.dataTaskPublisher(for: url1)
             .map(\.data)

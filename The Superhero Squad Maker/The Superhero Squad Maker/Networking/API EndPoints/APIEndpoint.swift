@@ -63,4 +63,3 @@ struct Endpoint: URLConfig, AuthenticationProtocol {
         return url
     }
 }
-
