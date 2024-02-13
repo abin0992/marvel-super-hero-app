@@ -13,7 +13,7 @@ struct ImageFromUrlView: View {
     let basePath: String
     let size: ImageSize
     let fileExtension: FileExtension
-    
+
     var body: some View {
         WebImage(
             url: ImageEndpoint(

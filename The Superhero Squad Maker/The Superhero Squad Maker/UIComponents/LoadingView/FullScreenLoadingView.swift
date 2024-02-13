@@ -18,14 +18,15 @@ struct FullScreenLoadingView: View {
                 .edgesIgnoringSafeArea(.all)
 
             VStack {
-
                 ProgressView()
                     .scaleEffect(1.5, anchor: .center)
                     .progressViewStyle(CircularProgressViewStyle(tint: .white))
                     .padding()
 
                 Text(title)
+                    .font(.title3)
                     .foregroundColor(.white)
+                    .bold()
             }
         }
     }

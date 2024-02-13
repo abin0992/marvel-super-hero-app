@@ -54,10 +54,11 @@
 		16ABD32E2B7B9DD100B14DFE /* ImageEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD32D2B7B9DD100B14DFE /* ImageEndpoint.swift */; };
 		16ABD3302B7BADDE00B14DFE /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD32F2B7BADDE00B14DFE /* Array+Extensions.swift */; };
 		16ABD3322B7BAE2700B14DFE /* ImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD3312B7BAE2700B14DFE /* ImageSize.swift */; };
-		16ABD3352B7BB57B00B14DFE /* NavigationBarCustomisable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD3342B7BB57B00B14DFE /* NavigationBarCustomisable.swift */; };
 		16ABD3392B7BB73100B14DFE /* NavigationBarColorModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD3382B7BB73100B14DFE /* NavigationBarColorModifier.swift */; };
 		16ABD33C2B7BB83000B14DFE /* HeroDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD33B2B7BB83000B14DFE /* HeroDetailView.swift */; };
 		16ABD33E2B7BD1A600B14DFE /* ImageFromUrlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD33D2B7BD1A600B14DFE /* ImageFromUrlView.swift */; };
+		16ABF4D12B7C12610081E59B /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABF4D02B7C12610081E59B /* View+Extensions.swift */; };
+		16ABF4D32B7C12C10081E59B /* HeroDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABF4D22B7C12C10081E59B /* HeroDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,10 +128,11 @@
 		16ABD32D2B7B9DD100B14DFE /* ImageEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEndpoint.swift; sourceTree = "<group>"; };
 		16ABD32F2B7BADDE00B14DFE /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		16ABD3312B7BAE2700B14DFE /* ImageSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSize.swift; sourceTree = "<group>"; };
-		16ABD3342B7BB57B00B14DFE /* NavigationBarCustomisable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarCustomisable.swift; sourceTree = "<group>"; };
 		16ABD3382B7BB73100B14DFE /* NavigationBarColorModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarColorModifier.swift; sourceTree = "<group>"; };
 		16ABD33B2B7BB83000B14DFE /* HeroDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailView.swift; sourceTree = "<group>"; };
 		16ABD33D2B7BD1A600B14DFE /* ImageFromUrlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFromUrlView.swift; sourceTree = "<group>"; };
+		16ABF4D02B7C12610081E59B /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		16ABF4D22B7C12C10081E59B /* HeroDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,11 +210,10 @@
 		16ABD2BD2B7A7C0200B14DFE /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
-				16ABD3012B7A87B700B14DFE /* ErrorPopupView.swift */,
+				16ABF4D52B7C1CCF0081E59B /* LoadingView */,
+				16ABF4D42B7C1CAF0081E59B /* ErrorView */,
 				16ABD2F92B7A871200B14DFE /* HeroList */,
 				16ABD2CE2B7A7CEE00B14DFE /* SquadButton.swift */,
-				16ABD2CF2B7A7CEE00B14DFE /* SquadView.swift */,
-				16ABD3282B7AC85B00B14DFE /* FullScreenLoadingView.swift */,
 				16ABD33D2B7BD1A600B14DFE /* ImageFromUrlView.swift */,
 			);
 			path = UIComponents;
@@ -250,11 +251,11 @@
 			isa = PBXGroup;
 			children = (
 				16ABD3372B7BB72900B14DFE /* View */,
-				16ABD3362B7BB5C000B14DFE /* Protocols */,
 				16ABD2C62B7A7C8900B14DFE /* CGFloat+Extensions.swift */,
 				16ABD2C72B7A7C8900B14DFE /* Color+Extensions.swift */,
 				16ABD2C82B7A7C8900B14DFE /* Image+Extensions.swift */,
 				16ABD32F2B7BADDE00B14DFE /* Array+Extensions.swift */,
+				16ABF4D02B7C12610081E59B /* View+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -325,18 +326,11 @@
 		16ABD2F92B7A871200B14DFE /* HeroList */ = {
 			isa = PBXGroup;
 			children = (
-				16ABD2FA2B7A872100B14DFE /* HeroListItem */,
+				16ABD2CF2B7A7CEE00B14DFE /* SquadView.swift */,
+				16ABD2D02B7A7CEE00B14DFE /* HeroListItemView.swift */,
 				16ABD2F72B7A86D400B14DFE /* HeroListView.swift */,
 			);
 			path = HeroList;
-			sourceTree = "<group>";
-		};
-		16ABD2FA2B7A872100B14DFE /* HeroListItem */ = {
-			isa = PBXGroup;
-			children = (
-				16ABD2D02B7A7CEE00B14DFE /* HeroListItemView.swift */,
-			);
-			path = HeroListItem;
 			sourceTree = "<group>";
 		};
 		16ABD2FD2B7A876600B14DFE /* Networking */ = {
@@ -427,14 +421,6 @@
 			path = Error;
 			sourceTree = "<group>";
 		};
-		16ABD3362B7BB5C000B14DFE /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				16ABD3342B7BB57B00B14DFE /* NavigationBarCustomisable.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
 		16ABD3372B7BB72900B14DFE /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -447,8 +433,25 @@
 			isa = PBXGroup;
 			children = (
 				16ABD33B2B7BB83000B14DFE /* HeroDetailView.swift */,
+				16ABF4D22B7C12C10081E59B /* HeroDetailViewModel.swift */,
 			);
 			path = HeroDetailView;
+			sourceTree = "<group>";
+		};
+		16ABF4D42B7C1CAF0081E59B /* ErrorView */ = {
+			isa = PBXGroup;
+			children = (
+				16ABD3012B7A87B700B14DFE /* ErrorPopupView.swift */,
+			);
+			path = ErrorView;
+			sourceTree = "<group>";
+		};
+		16ABF4D52B7C1CCF0081E59B /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				16ABD3282B7AC85B00B14DFE /* FullScreenLoadingView.swift */,
+			);
+			path = LoadingView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -623,6 +626,7 @@
 				16ABD2FF2B7A877C00B14DFE /* HTTPClient.swift in Sources */,
 				16ABD2F12B7A83EA00B14DFE /* DomainResult.swift in Sources */,
 				16ABD2E02B7A7FAF00B14DFE /* HomeView.swift in Sources */,
+				16ABF4D12B7C12610081E59B /* View+Extensions.swift in Sources */,
 				16ABD2D32B7A7CEE00B14DFE /* HeroListItemView.swift in Sources */,
 				16ABD28E2B7A7BF900B14DFE /* AppDelegate.swift in Sources */,
 				16ABD2F42B7A83EA00B14DFE /* AppConfiguration.swift in Sources */,
@@ -637,12 +641,12 @@
 				16ABD2D62B7A7ED900B14DFE /* ApplicationCoordinator.swift in Sources */,
 				16ABD31E2B7ABC7400B14DFE /* ServiceAssembly.swift in Sources */,
 				16ABD3072B7A87B700B14DFE /* DeveloperPreview.swift in Sources */,
-				16ABD3352B7BB57B00B14DFE /* NavigationBarCustomisable.swift in Sources */,
 				16ABD2DA2B7A7F1400B14DFE /* Coordinator.swift in Sources */,
 				16ABD3392B7BB73100B14DFE /* NavigationBarColorModifier.swift in Sources */,
 				16ABD30B2B7A87F900B14DFE /* APIEndpoint.swift in Sources */,
 				16ABD2CB2B7A7C8900B14DFE /* Image+Extensions.swift in Sources */,
 				16ABD2EA2B7A834C00B14DFE /* ResolverEnvironment.swift in Sources */,
+				16ABF4D32B7C12C10081E59B /* HeroDetailViewModel.swift in Sources */,
 				16ABD2F22B7A83EA00B14DFE /* StateModel.swift in Sources */,
 				16ABD2F32B7A83EA00B14DFE /* ClientError.swift in Sources */,
 				16ABD30F2B7A88E200B14DFE /* AuthenticationProtocol.swift in Sources */,

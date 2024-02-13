@@ -44,15 +44,15 @@ struct HomeView: View {
                     VStack {}
                 }
             }
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .principal) {
-                        Image("marvel-logo-nav") // Your image name
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height: 32) // Adjust the frame as needed
-                    }
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Image("marvel-logo-nav") // Your image name
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 32) // Adjust the frame as needed
                 }
+            }
         }
         .navigationBarColor(
             backgroundColor: UIColor(Color.greyDark),

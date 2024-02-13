@@ -63,13 +63,23 @@ private extension HomeCoordinator {
 //        ) else {
 //            return
 //        }
-        rootViewController.navigationBar.isHidden = false
+        let heroDetailViewModel = HeroDetailViewModel(heroViewModel: hero)
 
-        let heroDetailView = HeroDetailView(heroViewModel: hero)
+        heroDetailViewModel.output
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                self?.rootViewController.popViewController(animated: true)
+                self?.rootViewController.navigationBar.isHidden = true
+            }
+            .store(in: &cancellables)
+
+        let heroDetailView = HeroDetailView(viewModel: heroDetailViewModel)
             .environmentObject(resolverEnvironment)
 
         let detailViewController = UIHostingController(rootView: heroDetailView)
+        detailViewController.navigationItem.hidesBackButton = true
 
+        rootViewController.navigationBar.isHidden = false
         rootViewController.pushViewController(detailViewController, animated: true)
 
     }

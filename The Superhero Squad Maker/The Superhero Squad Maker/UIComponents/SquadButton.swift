@@ -4,17 +4,16 @@ struct SquadButton: View {
     @State var isInSquad: Bool = false
 
     var body: some View {
-        Button(action: {
-            isInSquad.toggle()
-        }) {
-            Text(
-                isInSquad
-                    ? TextContent.squadButtonFireText
-                    : TextContent.squadButtonRecruitText
-            )
+        Button(
+            action: {
+                isInSquad.toggle()
+            },
+            label: {
+                Text(isInSquad ? TextContent.squadButtonFireText : TextContent.squadButtonRecruitText)
                 .font(.headline)
                 .fontWeight(.semibold)
-        }
+            }
+        )
         .frame(height: .large)
         .frame(maxWidth: .infinity)
         .foregroundColor(.white)

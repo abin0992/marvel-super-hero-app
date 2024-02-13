@@ -6,47 +6,49 @@
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
 
-struct HeroDetailView: View, NavigationBarCustomisable {
+struct HeroDetailView: View {
 
-    @State var heroViewModel: Hero
+    @ObservedObject var viewModel: HeroDetailViewModel
+
+    init(viewModel: HeroDetailViewModel) {
+        self.viewModel = viewModel
+    }
 
     var body: some View {
-        NavigationView {
-            ScrollView {
-                VStack(alignment: .leading, spacing: .medium) {
+        ScrollView {
+            VStack(alignment: .leading, spacing: .medium) {
 
-                    GeometryReader { geometry in
-                        ImageFromUrlView(
-                            basePath: heroViewModel.thumbnail.path,
-                            size: .detail,
-                            fileExtension: heroViewModel.thumbnail.thumbnailExtension
-                        )
-                        .frame(width: geometry.size.width, height: geometry.size.width)
-                        .clipped()
-                    }
-                    .frame(height: UIScreen.main.bounds.width)
+                ImageFromUrlView(
+                    basePath: viewModel.heroViewModel.thumbnail.path,
+                    size: .detail,
+                    fileExtension: viewModel.heroViewModel.thumbnail.thumbnailExtension
+                )
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width)
+                .clipped()
 
-                    Text(heroViewModel.name)
-                        .font(.largeTitle)
-                        .bold()
-                        .foregroundColor(.white)
-                        .padding(.horizontal, .medium)
+                Text(viewModel.heroViewModel.name)
+                    .font(.largeTitle)
+                    .bold()
+                    .foregroundColor(.white)
+                    .padding(.horizontal, .medium)
 
-                    SquadButton()
+                SquadButton()
 
-                    Text(heroViewModel.description)
-                        .font(.body)
-                        .foregroundColor(.white)
-                        .padding(.horizontal, .medium)
+                Text(viewModel.heroViewModel.description)
+                    .font(.body)
+                    .foregroundColor(.white)
+                    .padding(.horizontal, .medium)
 
-                    Spacer()
-                }
+                Spacer()
             }
-            .background(Color.greyDark)
         }
-        .accentColor(.white)
+        .background(Color.greyDark)
+        .navigationTitle("")
+        .navigationBarBackButtonHidden(true)
+        .navigationBarBackButton {
+            viewModel.output.send()
+        }
     }
 }
 
