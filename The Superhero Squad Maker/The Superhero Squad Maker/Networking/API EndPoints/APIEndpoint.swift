@@ -20,7 +20,7 @@ protocol URLConfig {
     var url: URL { get }
 }
 
-// MARK: - PEEndPoint
+// MARK: - EndPoint
 
 struct Endpoint: URLConfig, AuthenticationProtocol {
 

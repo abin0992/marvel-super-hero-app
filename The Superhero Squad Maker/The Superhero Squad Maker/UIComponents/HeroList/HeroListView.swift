@@ -8,11 +8,32 @@
 import SwiftUI
 
 struct HeroListView: View {
+
+    @Binding var heroList: [Hero]
+    let fetchNextPage: () -> Void
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            ForEach($heroList) { hero in
+                HeroListItemView(heroViewModel: hero)
+                    .listRowBackground(Color.greyDark)
+                    .onAppear {
+                        if heroList.isLastItem(hero.wrappedValue) {
+                            fetchNextPage()
+                        }
+                    }
+            }
+        }
+        .frame( maxWidth: .infinity)
+        .edgesIgnoringSafeArea(.bottom)
+        .listStyle(GroupedListStyle())
+        .scrollContentBackground(.hidden)
     }
 }
 
 #Preview {
-    HeroListView()
+
+    @State var previewHeroes = DeveloperPreview.previewHeroList.data.results
+
+    return HeroListView(heroList: $previewHeroes) {}
 }

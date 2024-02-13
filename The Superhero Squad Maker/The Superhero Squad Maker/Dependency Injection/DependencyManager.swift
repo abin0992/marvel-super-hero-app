@@ -20,16 +20,16 @@ final class DependencyManager {
     }
 
     private func registerDependencies() {
-//        let serviceAssemblies = ServiceAssembly.all
-//        serviceAssemblies.forEach { $0.assemble(container: container) }
-//
-//        let moduleAssemblies = ModuleAssembly.all
-//        moduleAssemblies.forEach { $0.assemble(container: container) }
+        let serviceAssemblies = ServiceAssembly.all
+        serviceAssemblies.forEach { $0.assemble(container: container) }
+
+        let moduleAssemblies = ModuleAssembly.all
+        moduleAssemblies.forEach { $0.assemble(container: container) }
 
         let coordinatorAssemblies = CoordinatorAssembly.all
         coordinatorAssemblies.forEach { $0.assemble(container: container) }
 
-//        let networkAssemblies = NetworkAssembly.all
-//        networkAssemblies.forEach { $0.assemble(container: container) }
+        let networkAssemblies = NetworkAssembly.all
+        networkAssemblies.forEach { $0.assemble(container: container) }
     }
 }

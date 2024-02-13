@@ -13,4 +13,25 @@ final class DeveloperPreview {
 
     private init() {}
 
+    static let previewHeroList = SquadListResponse(
+        data: DataClass(
+            offset: 0,
+            limit: 0,
+            total: 0,
+            count: 0,
+            results: [
+                Hero(
+                    id: 1,
+                    name: "Iron man",
+                    description: "Tony Stark is a genius inventor and billionaire industrialist, who suits up in his armor of cutting-edge technology to become the super hero Iron Man.",
+                    thumbnail: Thumbnail(
+                        path: "",
+                        thumbnailExtension: .gif
+                    )
+                )
+            ]
+        )
+    )
+
+    static let previewHomeViewModel = HomeViewModel(fetchHeroListUseCase: PreviewFetchHeroListUseCase())
 }

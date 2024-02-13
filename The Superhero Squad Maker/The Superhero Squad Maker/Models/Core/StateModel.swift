@@ -54,3 +54,5 @@ struct StateModel<T: Equatable> {
         }
     }
 }
+
+struct PlaceholderState: Equatable {}

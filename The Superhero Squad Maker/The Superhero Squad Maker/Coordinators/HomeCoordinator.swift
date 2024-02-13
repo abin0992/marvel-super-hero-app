@@ -35,22 +35,21 @@ private extension HomeCoordinator {
 
     func displayHomeView() {
 
-//        guard let homeViewModel = resolver.resolve(HomeCryptoListViewModel.self) else {
-//            return
-//        }
-//
-//        homeViewModel.output
-//            .receive(on: DispatchQueue.main)
-//            .sink { [weak self] coin in
-//                self?.navigateToDetailScreen(coin: coin)
-//            }
-//            .store(in: &cancellables)
+        guard let homeViewModel = resolver.resolve(HomeViewModel.self) else {
+            return
+        }
 
-//        let homeView = HomeCryptoListView(viewModel: homeViewModel)
-//            .environmentObject(resolverEnvironment)
-        let homeViewController = UIHostingController(rootView: HomeView())
+        homeViewModel.output
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] coin in
+            //    self?.navigateToDetailScreen(coin: coin)
+            }
+            .store(in: &cancellables)
 
-        rootViewController.navigationBar.prefersLargeTitles = true
+        let homeView = HomeView(viewModel: homeViewModel)
+            .environmentObject(resolverEnvironment)
+        let homeViewController = UIHostingController(rootView: homeView)
+
         rootViewController.setViewControllers([homeViewController], animated: false)
     }
 //

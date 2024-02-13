@@ -22,7 +22,7 @@ struct DataClass: Codable {
 }
 
 // MARK: - Result
-struct Hero: Codable {
+struct Hero: Codable, Equatable, Identifiable {
     let id: Int
     let name: String
     let description: String
@@ -30,9 +30,9 @@ struct Hero: Codable {
 }
 
 // MARK: - Thumbnail
-struct Thumbnail: Codable {
+struct Thumbnail: Codable, Equatable {
     let path: String
-    let thumbnailExtension: Extension
+    let thumbnailExtension: FileExtension
 
     enum CodingKeys: String, CodingKey {
         case path
@@ -40,7 +40,8 @@ struct Thumbnail: Codable {
     }
 }
 
-enum Extension: String, Codable {
+enum FileExtension: String, Codable {
     case gif
     case jpg
+    case png
 }
