@@ -11,6 +11,7 @@ struct HeroListView: View {
 
     @Binding var heroList: [Hero]
     let fetchNextPage: () -> Void
+    let didSelectHero: (Hero) -> Void
 
     var body: some View {
         List {
@@ -22,11 +23,17 @@ struct HeroListView: View {
                             fetchNextPage()
                         }
                     }
+                    .onTapGesture {
+                        if Features.isDetailScreenEnabled {
+                            didSelectHero(hero.wrappedValue)
+                        }
+                    }
             }
         }
+        .background(Color.greyDark)
         .frame( maxWidth: .infinity)
         .edgesIgnoringSafeArea(.bottom)
-        .listStyle(GroupedListStyle())
+        .listStyle(.plain)
         .scrollContentBackground(.hidden)
     }
 }
@@ -35,5 +42,5 @@ struct HeroListView: View {
 
     @State var previewHeroes = DeveloperPreview.previewHeroList.data.results
 
-    return HeroListView(heroList: $previewHeroes) {}
+    return HeroListView(heroList: $previewHeroes) {} didSelectHero: { _ in}
 }

@@ -13,7 +13,7 @@ struct FullScreenLoadingView: View {
 
     var body: some View {
         ZStack {
-            Color.white
+            Color.greyDark
                 .opacity(0.8)
                 .edgesIgnoringSafeArea(.all)
 
@@ -21,10 +21,11 @@ struct FullScreenLoadingView: View {
 
                 ProgressView()
                     .scaleEffect(1.5, anchor: .center)
-                    .progressViewStyle(CircularProgressViewStyle(tint: .primary))
+                    .progressViewStyle(CircularProgressViewStyle(tint: .white))
                     .padding()
 
                 Text(title)
+                    .foregroundColor(.white)
             }
         }
     }

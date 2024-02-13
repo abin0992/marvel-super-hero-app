@@ -16,32 +16,48 @@ struct HomeView: View {
     }
 
     var body: some View {
-        ZStack {
-            switch viewModel.state {
-            case .data, .loading:
-                ZStack {
-                    HeroListView(heroList: $viewModel.heros) {
-                        viewModel.fetchNextPage.send(())
+        NavigationView {
+            ZStack {
+                switch viewModel.state {
+                case .data, .loading:
+                    ZStack {
+                        HeroListView(heroList: $viewModel.heros) {
+                            viewModel.fetchNextPage.send(())
+                        } didSelectHero: { hero in
+                            viewModel.output.send(hero)
+                        }
+                        if viewModel.state == .loading {
+                            FullScreenLoadingView(
+                                title: viewModel.offset == 0 ? TextContent.initialLoadingText : TextContent.paginationLoadingText
+                            )
+                        }
                     }
-                    if viewModel.state == .loading {
-                        FullScreenLoadingView(
-                            title: viewModel.offset == 0 ? TextContent.initialLoadingText : TextContent.paginationLoadingText
-                        )
+                case .error(let clientError):
+                    ErrorPopupView(
+                        title: TextContent.errorOccured,
+                        subtitle: clientError.localizedDescription,
+                        retryAction: {
+                            viewModel.didTapRetry.send(())
+                        }
+                    )
+                default:
+                    VStack {}
+                }
+            }
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .principal) {
+                        Image("marvel-logo-nav") // Your image name
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 32) // Adjust the frame as needed
                     }
                 }
-            case .error(let clientError):
-                ErrorPopupView(
-                    title: TextContent.errorOccured,
-                    subtitle: clientError.localizedDescription,
-                    retryAction: {
-                        viewModel.didTapRetry.send(())
-                    }
-                )
-            default:
-                VStack {}
-            }
         }
-        .navigationBarBackButtonHidden(true)
+        .navigationBarColor(
+            backgroundColor: UIColor(Color.greyDark),
+            foregroundColor: UIColor.white
+        )
     }
 }
 

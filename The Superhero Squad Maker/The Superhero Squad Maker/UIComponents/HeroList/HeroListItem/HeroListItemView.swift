@@ -7,16 +7,11 @@ struct HeroListItemView: View {
 
     var body: some View {
         HStack {
-            WebImage(
-                url: ImageEndpoint(
-                    basePath: heroViewModel.thumbnail.path,
-                    size: .standardMedium,
-                    fileExtension: heroViewModel.thumbnail.thumbnailExtension
-                ).url
+            ImageFromUrlView(
+                basePath: heroViewModel.thumbnail.path,
+                size: .standardMedium,
+                fileExtension: heroViewModel.thumbnail.thumbnailExtension
             )
-                .resizable()
-                .placeholder(Image("marvel-logo-square"))
-                .scaledToFill()
                 .clipShape(Circle())
                 .frame(width: .large, height: .large)
                 .padding(.all, .medium)

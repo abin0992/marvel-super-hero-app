@@ -8,10 +8,6 @@
 import Foundation
 
 enum ImageSize: String {
-    case standardSmall = "standard_small"
     case standardMedium = "standard_medium"
-    case standardLarge = "standard_large"
-    case standardXLarge = "standard_xlarge"
-    case standardFantastic = "standard_fantastic"
-    case standardAmazing = "standard_amazing"
+    case detail = "detail"
 }

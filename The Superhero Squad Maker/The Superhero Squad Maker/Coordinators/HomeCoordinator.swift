@@ -41,32 +41,36 @@ private extension HomeCoordinator {
 
         homeViewModel.output
             .receive(on: DispatchQueue.main)
-            .sink { [weak self] coin in
-            //    self?.navigateToDetailScreen(coin: coin)
+            .sink { [weak self] hero in
+                self?.navigateToDetailScreen(hero: hero)
             }
             .store(in: &cancellables)
 
         let homeView = HomeView(viewModel: homeViewModel)
             .environmentObject(resolverEnvironment)
         let homeViewController = UIHostingController(rootView: homeView)
+        homeViewController.title = ""
 
+        rootViewController.navigationBar.isHidden = true
         rootViewController.setViewControllers([homeViewController], animated: false)
     }
-//
-//    func navigateToDetailScreen(coin: CoinRowViewModel) {
-//
+
+    func navigateToDetailScreen(hero: Hero) {
+
 //        guard let coinDetailViewModel = resolver.resolve(
 //            CoinDetailViewModel.self,
 //            argument: coin
 //        ) else {
 //            return
 //        }
-//
-//        let coinDetailView = CoinDetailView(viewModel: coinDetailViewModel)
-//            .environmentObject(resolverEnvironment)
-//        let detailViewController = UIHostingController(rootView: coinDetailView)
-//
-//        rootViewController.pushViewController(detailViewController, animated: true)
-//
-//    }
+        rootViewController.navigationBar.isHidden = false
+
+        let heroDetailView = HeroDetailView(heroViewModel: hero)
+            .environmentObject(resolverEnvironment)
+
+        let detailViewController = UIHostingController(rootView: heroDetailView)
+
+        rootViewController.pushViewController(detailViewController, animated: true)
+
+    }
 }
