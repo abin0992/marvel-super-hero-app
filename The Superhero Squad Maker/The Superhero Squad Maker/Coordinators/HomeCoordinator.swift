@@ -25,7 +25,7 @@ final class HomeCoordinator: Coordinator {
         self.resolverEnvironment = resolverEnvironment
     }
 
-    func start() {
+    @MainActor func start() {
         displayHomeView()
     }
 
@@ -33,6 +33,7 @@ final class HomeCoordinator: Coordinator {
 
 private extension HomeCoordinator {
 
+    @MainActor
     func displayHomeView() {
 
         guard let homeViewModel = resolver.resolve(HomeViewModel.self) else {
@@ -55,17 +56,17 @@ private extension HomeCoordinator {
         rootViewController.setViewControllers([homeViewController], animated: false)
     }
 
+    @MainActor
     func navigateToDetailScreen(hero: Hero) {
 
-//        guard let coinDetailViewModel = resolver.resolve(
-//            CoinDetailViewModel.self,
-//            argument: coin
-//        ) else {
-//            return
-//        }
-        let heroDetailViewModel = HeroDetailViewModel(heroViewModel: hero)
+        guard let heroDetailViewModel = resolver.resolve(
+            HeroDetailViewModel.self,
+            argument: hero
+        ) else {
+            return
+        }
 
-        heroDetailViewModel.output
+        heroDetailViewModel.didTapBackButton
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
                 self?.rootViewController.popViewController(animated: true)

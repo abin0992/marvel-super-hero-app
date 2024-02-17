@@ -15,7 +15,7 @@ extension View {
                 Button {
                     action()
                 } label: {
-                    Image(systemName: "chevron.backward")
+                    Image("back-button")
                         .tint(Color.accentColor)
                 }
             }

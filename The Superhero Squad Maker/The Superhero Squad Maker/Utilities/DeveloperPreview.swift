@@ -7,6 +7,7 @@
 
 import Foundation
 
+@MainActor
 final class DeveloperPreview {
 
     static let instance = DeveloperPreview()
@@ -23,15 +24,18 @@ final class DeveloperPreview {
                 Hero(
                     id: 1,
                     name: "Iron man",
-                    description: "Tony Stark is a genius inventor and billionaire industrialist, who suits up in his armor of cutting-edge technology to become the super hero Iron Man.",
+                    heroDescription: "Tony Stark is a genius inventor and billionaire industrialist, who suits up in his armor of cutting-edge technology to become the super hero Iron Man.",
                     thumbnail: Thumbnail(
                         path: "",
-                        thumbnailExtension: .gif
+                        thumbnailExtension: "gif"
                     )
                 )
             ]
         )
     )
 
-    static let previewHomeViewModel = HomeViewModel(fetchHeroListUseCase: PreviewFetchHeroListUseCase())
+    static let previewHomeViewModel = HomeViewModel(
+        fetchHeroListUseCase: PreviewFetchHeroListUseCase(),
+        fetchSquadUseCase: PreviewFetchSquadUseCase()
+    )
 }

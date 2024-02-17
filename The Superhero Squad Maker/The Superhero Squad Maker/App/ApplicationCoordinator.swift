@@ -25,7 +25,7 @@ final class ApplicationCoordinator: Coordinator {
         self.window = window
     }
 
-    func start() {
+    @MainActor func start() {
         let resolverEnvironment = ResolverEnvironment()
 
         guard let homeCoordinator = resolver.resolve(

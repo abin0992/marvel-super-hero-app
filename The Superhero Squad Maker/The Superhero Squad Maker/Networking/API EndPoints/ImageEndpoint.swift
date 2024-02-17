@@ -30,10 +30,10 @@ struct ImageEndpoint: URLConfig {
     init(
         basePath: String,
         size: ImageSize,
-        fileExtension: FileExtension
+        fileExtension: String
     ) {
         self.basePath = basePath
         self.size = size.rawValue
-        self.fileExtension = fileExtension.rawValue
+        self.fileExtension = fileExtension
     }
 }

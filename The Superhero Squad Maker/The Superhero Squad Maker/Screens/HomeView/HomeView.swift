@@ -21,17 +21,28 @@ struct HomeView: View {
                 switch viewModel.state {
                 case .data, .loading:
                     ZStack {
-                        HeroListView(heroList: $viewModel.heros) {
-                            viewModel.fetchNextPage.send(())
-                        } didSelectHero: { hero in
-                            viewModel.output.send(hero)
+                        VStack (spacing: .medium) {
+                            if !viewModel.squad.isEmpty {
+                                SquadView(
+                                    heroList: $viewModel.squad) { hero in
+                                        viewModel.output.send(hero)
+                                    }
+                            }
+
+                            HeroListView(heroList: $viewModel.allHeros) {
+                                viewModel.fetchNextPage.send(())
+                            } didSelectHero: { hero in
+                                viewModel.output.send(hero)
+                            }
                         }
+
                         if viewModel.state == .loading {
                             FullScreenLoadingView(
                                 title: viewModel.offset == 0 ? TextContent.initialLoadingText : TextContent.paginationLoadingText
                             )
                         }
                     }
+                    .background(Color.greyDark)
                 case .error(let clientError):
                     ErrorPopupView(
                         title: TextContent.errorOccured,

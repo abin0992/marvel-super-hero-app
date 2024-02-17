@@ -33,21 +33,36 @@ struct HeroDetailView: View {
                     .foregroundColor(.white)
                     .padding(.horizontal, .medium)
 
-                SquadButton()
+                SquadButton(isInSquad: $viewModel.isInMySquad) {
+                    if viewModel.isInMySquad {
+                        viewModel.showConfirmationAlert = true
+                    } else {
+                        viewModel.didTapUpdateSquad.send(())
+                    }
+                }
 
-                Text(viewModel.heroViewModel.description)
+                Text(viewModel.heroViewModel.heroDescription)
                     .font(.body)
                     .foregroundColor(.white)
                     .padding(.horizontal, .medium)
 
                 Spacer()
             }
+            .alert(isPresented: $viewModel.showConfirmationAlert) {
+                Alert(
+                    title: Text(TextContent.squadButtonFireText),
+                    message: Text(TextContent.confirmMessage),
+                    primaryButton: .destructive(Text(TextContent.confirmButtonTitle)) {
+                        viewModel.didTapUpdateSquad.send(())
+                    },
+                    secondaryButton: .cancel()
+                )
+            }
         }
         .background(Color.greyDark)
-        .navigationTitle("")
         .navigationBarBackButtonHidden(true)
         .navigationBarBackButton {
-            viewModel.output.send()
+            viewModel.didTapBackButton.send()
         }
     }
 }

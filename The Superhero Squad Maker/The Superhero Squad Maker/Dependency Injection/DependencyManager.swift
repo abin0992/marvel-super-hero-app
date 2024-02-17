@@ -31,5 +31,8 @@ final class DependencyManager {
 
         let networkAssemblies = NetworkAssembly.all
         networkAssemblies.forEach { $0.assemble(container: container) }
+
+        let dataContainerAssembly = DataContainerAssembly.all
+        dataContainerAssembly.forEach { $0.assemble(container: container) }
     }
 }

@@ -1,12 +1,14 @@
 import SwiftUI
 
 struct SquadButton: View {
-    @State var isInSquad: Bool = false
+    @Binding var isInSquad: Bool
+
+    var action: () -> Void
 
     var body: some View {
         Button(
             action: {
-                isInSquad.toggle()
+                action()
             },
             label: {
                 Text(isInSquad ? TextContent.squadButtonFireText : TextContent.squadButtonRecruitText)
@@ -23,7 +25,7 @@ struct SquadButton: View {
         .overlay(
             RoundedRectangle(cornerRadius: .small)
                 .stroke(
-                    isInSquad ? Color.redLight : .redDark,
+                    isInSquad ? Color.redLight : .clear,
                     style: StrokeStyle(lineWidth: .xSmall)
                 )
         )

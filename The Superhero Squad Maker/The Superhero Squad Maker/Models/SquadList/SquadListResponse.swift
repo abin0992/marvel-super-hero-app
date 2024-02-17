@@ -22,26 +22,27 @@ struct DataClass: Codable {
 }
 
 // MARK: - Result
-struct Hero: Codable, Equatable, Identifiable {
+struct Hero: Codable, Equatable, Identifiable, CommonModelProtocol {
     let id: Int
     let name: String
-    let description: String
+    let heroDescription: String
     let thumbnail: Thumbnail
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case heroDescription = "description"
+        case thumbnail
+    }
 }
 
 // MARK: - Thumbnail
 struct Thumbnail: Codable, Equatable {
     let path: String
-    let thumbnailExtension: FileExtension
+    let thumbnailExtension: String
 
     enum CodingKeys: String, CodingKey {
         case path
         case thumbnailExtension = "extension"
     }
-}
-
-enum FileExtension: String, Codable {
-    case gif
-    case jpg
-    case png
 }

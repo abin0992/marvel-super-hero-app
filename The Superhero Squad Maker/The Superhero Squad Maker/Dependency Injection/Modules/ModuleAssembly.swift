@@ -8,15 +8,17 @@
 import Foundation
 import Swinject
 
+@MainActor
 final class ModuleAssembly {
 
     static let all: [Assembly] = [
-        HomeScreenAssembly()
-     //   CoinDetailAssembly()
+        HomeScreenAssembly(),
+        HeroDetailAssembly()
     ]
 
 }
 
+@MainActor
 final class HomeScreenAssembly: Assembly {
 
     func assemble(container: Container) {
@@ -29,41 +31,36 @@ final class HomeScreenAssembly: Assembly {
 
         container.register(HomeViewModel.self) { resolver in
             HomeViewModel(
-                fetchHeroListUseCase: resolver.resolve(FetchHeroListUseCaseProtocol.self)!
+                fetchHeroListUseCase: resolver.resolve(FetchHeroListUseCaseProtocol.self)!,
+                fetchSquadUseCase: resolver.resolve(FetchSquadUseCaseProtocol.self)!
             )
         }
-//
-//        container.register(CryptoLogoViewModel.self) { resolver, coinId, coinImageUrl in
-//            CryptoLogoViewModel(
-//                coinId: coinId,
-//                coinImageUrl: coinImageUrl,
-//                fetchCryptoLogoUseCase: resolver.resolve(FetchCryptoLogoUseCaseProtocol.self)!
-//            )
-//        }
-//
-//        container.register(FetchCryptoPricesUseCaseProtocol.self) { resolver in
-//            FetchCryptoPricesUseCase(
-//                cryptoService: resolver.resolve(CryptoFetchable.self)!
-//            )
-//        }
+
+        container.register(FetchSquadUseCaseProtocol.self) { resolver in
+            FetchSquadUseCase(
+                storageManager: resolver.resolve(HeroStorageProtocol.self)!
+            )
+        }
     }
 }
 
-//final class CoinDetailAssembly: Assembly {
-//
-//    func assemble(container: Container) {
-//
-//        container.register(CoinDetailViewModel.self) { resolver, coin in
-//            CoinDetailViewModel(
-//                fetchCrypoDetailUseCase: resolver.resolve(FetchCrypoDetailUseCaseProtocol.self)!,
-//                coin: coin
-//            )
-//        }
-//
-//        container.register(FetchCrypoDetailUseCaseProtocol.self) { resolver in
-//            FetchCrypoDetailUseCase(
-//                cryptoService: resolver.resolve(CryptoFetchable.self)!
-//            )
-//        }
-//    }
-//}
+@MainActor
+final class HeroDetailAssembly: Assembly {
+
+    func assemble(container: Container) {
+
+        container.register(HeroDetailViewModel.self) { resolver, hero in
+            HeroDetailViewModel(
+                heroViewModel: hero,
+                editSquadUseCase: resolver.resolve(EditSquadUseCase.self)!,
+                fetchSquadUseCase: resolver.resolve(FetchSquadUseCaseProtocol.self)!
+            )
+        }
+
+        container.register(EditSquadUseCase.self) { resolver in
+            EditSquadUseCase(
+                storageManager: resolver.resolve(HeroStorageProtocol.self)!
+            )
+        }
+    }
+}

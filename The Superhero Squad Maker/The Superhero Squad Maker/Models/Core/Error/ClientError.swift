@@ -14,6 +14,7 @@ enum ClientError: Error, Equatable, LocalizedError {
     case networkError
     case badURLResponse(url: URL)
     case unknown
+    case persistanceError
 
     var errorDescription: String? {
         switch self {

@@ -7,13 +7,16 @@
 
 import Combine
 import Foundation
+import SwiftData
 
+@MainActor
 final class HomeViewModel: ObservableObject {
 
     private(set) var output = PassthroughSubject<Hero, Never>()
 
     @Published var state = StateModel<[Hero]>.State.loading
-    @Published var heros: [Hero] = []
+    @Published var allHeros: [Hero] = []
+    @Published var squad: [Hero] = []
 
     let didTapRetry = PassthroughSubject<Void, Never>()
     let fetchNextPage = PassthroughSubject<Void, Never>()
@@ -24,11 +27,18 @@ final class HomeViewModel: ObservableObject {
 
     private lazy var fetchHeroListResult = makeFetchHeroListResult()
         .share()
+    private lazy var fetchMySquad = fetchMySquadResult()
 
     private let fetchHeroListUseCase: FetchHeroListUseCaseProtocol
+    private let fetchSquadUseCase: FetchSquadUseCaseProtocol
 
-    init(fetchHeroListUseCase: FetchHeroListUseCaseProtocol) {
+    init(
+        fetchHeroListUseCase: FetchHeroListUseCaseProtocol,
+        fetchSquadUseCase: FetchSquadUseCaseProtocol
+    ) {
         self.fetchHeroListUseCase = fetchHeroListUseCase
+        self.fetchSquadUseCase = fetchSquadUseCase
+
         setUpBindings()
     }
 
@@ -38,6 +48,7 @@ private extension HomeViewModel {
 
     func setUpBindings() {
         bindState()
+        bindSquad()
     }
 
     func bindState() {
@@ -49,10 +60,10 @@ private extension HomeViewModel {
                 case .error:
                     return .error(ClientError.generic)
                 case .success(let response):
-                    self.heros.append(contentsOf: response.data.results)
+                    self.allHeros.append(contentsOf: response.data.results)
                     self.offset += response.data.count
                     self.total = response.data.total
-                    return .data(self.heros)
+                    return .data(self.allHeros)
                 }
             }
             .assign(to: &$state)
@@ -61,10 +72,31 @@ private extension HomeViewModel {
             didTapRetry,
             fetchNextPage
         )
-            .map { .loading }
-            .assign(to: &$state)
+        .map { .loading }
+        .assign(to: &$state)
     }
 
+    func bindSquad()  {
+        fetchMySquad
+            .map { $0 }
+            .replaceError(with: [])
+            .assign(to: &$squad)
+    }
+
+    func fetchMySquadResult() -> AnyPublisher<[Hero], Error> {
+        Publishers.Merge(
+            Just(()),
+            NotificationCenter.default.publisher(for: .squadUpdated)
+                .mapToVoid()
+        )
+        .flatMap { [fetchSquadUseCase] _ -> AnyPublisher<[Hero], Error> in
+            fetchSquadUseCase.execute()
+        }
+        .eraseToAnyPublisher()
+    }
+}
+
+private extension HomeViewModel {
     func makeFetchHeroListResult() -> AnyPublisher<DomainResult<SquadListResponse>, Never> {
         Publishers.Merge3(
             Just<Void>(()),

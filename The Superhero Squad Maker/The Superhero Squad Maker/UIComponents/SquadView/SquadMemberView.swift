@@ -1,17 +1,22 @@
 import SwiftUI
 
-struct SquadView: View {
+struct SquadMemberView: View {
+
+    @Binding var heroViewModel: Hero
 
     var body: some View {
         VStack {
-            Image("placeholder")
-                .resizable()
-                .scaledToFill()
+            ImageFromUrlView(
+                basePath: heroViewModel.thumbnail.path,
+                size: .standardMedium,
+                fileExtension: heroViewModel.thumbnail.thumbnailExtension
+            )
                 .clipShape(Circle())
                 .frame(width: .xLarge, height: .xLarge)
+                .padding(.all, .medium)
 
             VStack {
-                Text("placeholder")
+                Text(heroViewModel.name)
                     .font(.footnote)
                     .fontWeight(.bold)
                     .lineLimit(2)
@@ -25,6 +30,6 @@ struct SquadView: View {
     }
 }
 
-#Preview {
-    SquadView()
-}
+//#Preview {
+//    SquadView()
+//}
