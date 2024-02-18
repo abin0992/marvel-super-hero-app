@@ -57,7 +57,7 @@ final class HeroDetailAssembly: Assembly {
             )
         }
 
-        container.register(EditSquadUseCase.self) { resolver in
+        container.register(EditSquadUseCaseProtocol.self) { resolver in
             EditSquadUseCase(
                 storageManager: resolver.resolve(HeroStorageProtocol.self)!
             )

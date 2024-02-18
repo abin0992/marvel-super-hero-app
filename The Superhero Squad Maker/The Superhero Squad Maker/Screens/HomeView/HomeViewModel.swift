@@ -76,7 +76,7 @@ private extension HomeViewModel {
         .assign(to: &$state)
     }
 
-    func bindSquad()  {
+    func bindSquad() {
         fetchMySquad
             .map { $0 }
             .replaceError(with: [])
@@ -97,13 +97,13 @@ private extension HomeViewModel {
 }
 
 private extension HomeViewModel {
-    func makeFetchHeroListResult() -> AnyPublisher<DomainResult<SquadListResponse>, Never> {
+    func makeFetchHeroListResult() -> AnyPublisher<DomainResult<HeroListResponse>, Never> {
         Publishers.Merge3(
             Just<Void>(()),
             didTapRetry,
             fetchNextPage
         )
-        .flatMap { [weak self] _ -> AnyPublisher<DomainResult<SquadListResponse>, Never> in
+        .flatMap { [weak self] _ -> AnyPublisher<DomainResult<HeroListResponse>, Never> in
             guard let self else { return Empty().eraseToAnyPublisher() }
             return self.fetchHeroListUseCase.execute(
                 offset: String(self.offset)

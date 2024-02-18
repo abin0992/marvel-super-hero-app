@@ -14,7 +14,7 @@ final class DeveloperPreview {
 
     private init() {}
 
-    static let previewHeroList = SquadListResponse(
+    static let previewHeroList = HeroListResponse(
         data: DataClass(
             offset: 0,
             limit: 0,

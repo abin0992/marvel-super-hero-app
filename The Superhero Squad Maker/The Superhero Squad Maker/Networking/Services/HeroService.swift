@@ -9,7 +9,7 @@ import Combine
 import Foundation
 
 protocol HeroFetchable {
-    func fetchHeroList(offset: String) -> AnyPublisher<SquadListResponse, Error>
+    func fetchHeroList(offset: String) -> AnyPublisher<HeroListResponse, Error>
 }
 
 final class HeroService: HeroFetchable {
@@ -24,13 +24,13 @@ final class HeroService: HeroFetchable {
         self.httpClient = httpClient
     }
 
-    func fetchHeroList(offset: String) -> AnyPublisher<SquadListResponse, Error> {
+    func fetchHeroList(offset: String) -> AnyPublisher<HeroListResponse, Error> {
         httpClient.performRequest(
             url: config.fetchAllHeros(offset: offset).url,
             method: .get,
             body: nil
         )
-        .decode(type: SquadListResponse.self, decoder: decoder)
+        .decode(type: HeroListResponse.self, decoder: decoder)
         .eraseToAnyPublisher()
     }
 }

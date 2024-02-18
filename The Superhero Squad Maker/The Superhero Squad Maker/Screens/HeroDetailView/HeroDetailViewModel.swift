@@ -48,8 +48,7 @@ private extension HeroDetailViewModel {
     func bindSquadButton() {
         fetchMySquad
             .map { [heroViewModel] mySquad -> Bool in
-                print(mySquad.description)
-                return mySquad.contains(where: { $0.id == heroViewModel.id })
+                mySquad.contains(where: { $0.id == heroViewModel.id })
             }
             .replaceError(with: false)
             .assign(to: &$isInMySquad)

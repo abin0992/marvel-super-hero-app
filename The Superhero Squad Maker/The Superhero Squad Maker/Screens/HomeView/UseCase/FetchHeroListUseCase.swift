@@ -9,7 +9,7 @@ import Combine
 import Foundation
 
 protocol FetchHeroListUseCaseProtocol {
-    func execute(offset: String) -> AnyPublisher<DomainResult<SquadListResponse>, Never>
+    func execute(offset: String) -> AnyPublisher<DomainResult<HeroListResponse>, Never>
 }
 
 final class FetchHeroListUseCase: FetchHeroListUseCaseProtocol {
@@ -20,10 +20,10 @@ final class FetchHeroListUseCase: FetchHeroListUseCaseProtocol {
         self.heroService = heroService
     }
 
-    func execute(offset: String) -> AnyPublisher<DomainResult<SquadListResponse>, Never> {
+    func execute(offset: String) -> AnyPublisher<DomainResult<HeroListResponse>, Never> {
         heroService
             .fetchHeroList(offset: offset)
-            .map(DomainResult<SquadListResponse>.success)
+            .map(DomainResult<HeroListResponse>.success)
             .catch { error in
                 Just(.error(error))
             }
@@ -33,9 +33,9 @@ final class FetchHeroListUseCase: FetchHeroListUseCaseProtocol {
 
 // MARK: For preview
 final class PreviewFetchHeroListUseCase: FetchHeroListUseCaseProtocol {
-    func execute(offset: String) -> AnyPublisher<DomainResult<SquadListResponse>, Never> {
+    func execute(offset: String) -> AnyPublisher<DomainResult<HeroListResponse>, Never> {
         Just(DeveloperPreview.previewHeroList)
-            .map(DomainResult<SquadListResponse>.success)
+            .map(DomainResult<HeroListResponse>.success)
             .eraseToAnyPublisher()
     }
 }

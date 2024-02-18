@@ -23,12 +23,30 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 		<key>The Superhero Squad Maker.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>16ABD2892B7A7BF900B14DFE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>16ABD29F2B7A7BFA00B14DFE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>16ABD2A92B7A7BFA00B14DFE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
