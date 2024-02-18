@@ -44,7 +44,7 @@
 		16ABD3072B7A87B700B14DFE /* DeveloperPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD3032B7A87B700B14DFE /* DeveloperPreview.swift */; };
 		16ABD3082B7A87B700B14DFE /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD3042B7A87B700B14DFE /* LocalFileManager.swift */; };
 		16ABD30B2B7A87F900B14DFE /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD30A2B7A87F900B14DFE /* APIEndpoint.swift */; };
-		16ABD30D2B7A882200B14DFE /* HeroListEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD30C2B7A882200B14DFE /* HeroListEndPoint.swift */; };
+		16ABD30D2B7A882200B14DFE /* HeroEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD30C2B7A882200B14DFE /* HeroEndPoints.swift */; };
 		16ABD30F2B7A88E200B14DFE /* AuthenticationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD30E2B7A88E200B14DFE /* AuthenticationProtocol.swift */; };
 		16ABD3112B7A89F200B14DFE /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD3102B7A89F200B14DFE /* Security.swift */; };
 		16ABD3142B7A8D0700B14DFE /* SquadListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD3132B7A8D0700B14DFE /* SquadListResponse.swift */; };
@@ -70,8 +70,6 @@
 		16ABF4EC2B7E69E70081E59B /* CommonModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABF4EB2B7E69E70081E59B /* CommonModelProtocol.swift */; };
 		16ABF4EF2B7E6A140081E59B /* StorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABF4EE2B7E6A140081E59B /* StorageProtocol.swift */; };
 		16ABF4F12B7E6A4B0081E59B /* ManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABF4F02B7E6A4B0081E59B /* ManagerProtocol.swift */; };
-		16ABF4F32B7E7EC50081E59B /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABF4F22B7E7EC50081E59B /* Resolver.swift */; };
-		16ABF4F52B7E7F1E0081E59B /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABF4F42B7E7F1E0081E59B /* Inject.swift */; };
 		16ABF4F92B7E85510081E59B /* HeroPersistentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABF4F82B7E85510081E59B /* HeroPersistentModel.swift */; };
 		16ABF4FD2B7F4F830081E59B /* EditSquadUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABF4FC2B7F4F830081E59B /* EditSquadUseCase.swift */; };
 /* End PBXBuildFile section */
@@ -133,7 +131,7 @@
 		16ABD3032B7A87B700B14DFE /* DeveloperPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeveloperPreview.swift; sourceTree = "<group>"; };
 		16ABD3042B7A87B700B14DFE /* LocalFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
 		16ABD30A2B7A87F900B14DFE /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
-		16ABD30C2B7A882200B14DFE /* HeroListEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListEndPoint.swift; sourceTree = "<group>"; };
+		16ABD30C2B7A882200B14DFE /* HeroEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroEndPoints.swift; sourceTree = "<group>"; };
 		16ABD30E2B7A88E200B14DFE /* AuthenticationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationProtocol.swift; sourceTree = "<group>"; };
 		16ABD3102B7A89F200B14DFE /* Security.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Security.swift; sourceTree = "<group>"; };
 		16ABD3132B7A8D0700B14DFE /* SquadListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadListResponse.swift; sourceTree = "<group>"; };
@@ -158,8 +156,6 @@
 		16ABF4EB2B7E69E70081E59B /* CommonModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonModelProtocol.swift; sourceTree = "<group>"; };
 		16ABF4EE2B7E6A140081E59B /* StorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageProtocol.swift; sourceTree = "<group>"; };
 		16ABF4F02B7E6A4B0081E59B /* ManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerProtocol.swift; sourceTree = "<group>"; };
-		16ABF4F22B7E7EC50081E59B /* Resolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
-		16ABF4F42B7E7F1E0081E59B /* Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inject.swift; sourceTree = "<group>"; };
 		16ABF4F82B7E85510081E59B /* HeroPersistentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroPersistentModel.swift; sourceTree = "<group>"; };
 		16ABF4FC2B7F4F830081E59B /* EditSquadUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSquadUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -225,9 +221,7 @@
 			children = (
 				16ABD2C32B7A7C3300B14DFE /* App */,
 				16ABD2D82B7A7EFF00B14DFE /* Coordinators */,
-				16ABD2E32B7A828400B14DFE /* Dependency Injection */,
 				16ABD2C52B7A7C6700B14DFE /* Extensions */,
-				16ABD29B2B7A7BFA00B14DFE /* Info.plist */,
 				16ABD2BE2B7A7C0900B14DFE /* Models */,
 				16ABD2FD2B7A876600B14DFE /* Networking */,
 				16ABD2C42B7A7C4500B14DFE /* Resources */,
@@ -271,9 +265,11 @@
 		16ABD2C32B7A7C3300B14DFE /* App */ = {
 			isa = PBXGroup;
 			children = (
+				16ABD29B2B7A7BFA00B14DFE /* Info.plist */,
 				16ABD28D2B7A7BF900B14DFE /* AppDelegate.swift */,
-				16ABD28F2B7A7BF900B14DFE /* SceneDelegate.swift */,
 				16ABD2D52B7A7ED900B14DFE /* ApplicationCoordinator.swift */,
+				16ABD28F2B7A7BF900B14DFE /* SceneDelegate.swift */,
+				16ABD2E32B7A828400B14DFE /* Dependency Injection */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -290,13 +286,13 @@
 		16ABD2C52B7A7C6700B14DFE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				16ABD3372B7BB72900B14DFE /* View */,
+				16ABD32F2B7BADDE00B14DFE /* Array+Extensions.swift */,
 				16ABD2C62B7A7C8900B14DFE /* CGFloat+Extensions.swift */,
 				16ABD2C72B7A7C8900B14DFE /* Color+Extensions.swift */,
 				16ABD2C82B7A7C8900B14DFE /* Image+Extensions.swift */,
-				16ABD32F2B7BADDE00B14DFE /* Array+Extensions.swift */,
-				16ABF4D02B7C12610081E59B /* View+Extensions.swift */,
 				1611FDCC2B810B77006A6A78 /* Notification+Name.swift */,
+				16ABF4D02B7C12610081E59B /* View+Extensions.swift */,
+				16ABD3372B7BB72900B14DFE /* View */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -332,14 +328,12 @@
 		16ABD2E32B7A828400B14DFE /* Dependency Injection */ = {
 			isa = PBXGroup;
 			children = (
-				16ABF4E22B7E625E0081E59B /* SwiftData */,
-				16ABD2E62B7A82CA00B14DFE /* Coordinators */,
 				16ABD2E42B7A82AF00B14DFE /* DependencyManager.swift */,
+				16ABD2E92B7A834C00B14DFE /* ResolverEnvironment.swift */,
+				16ABD2E62B7A82CA00B14DFE /* Coordinators */,
 				16ABD3222B7AC0D200B14DFE /* Modules */,
 				16ABD3252B7AC79800B14DFE /* Network */,
-				16ABD2E92B7A834C00B14DFE /* ResolverEnvironment.swift */,
-				16ABF4F22B7E7EC50081E59B /* Resolver.swift */,
-				16ABF4F42B7E7F1E0081E59B /* Inject.swift */,
+				16ABF4E22B7E625E0081E59B /* SwiftData */,
 			);
 			path = "Dependency Injection";
 			sourceTree = "<group>";
@@ -402,7 +396,7 @@
 			isa = PBXGroup;
 			children = (
 				16ABD30A2B7A87F900B14DFE /* APIEndpoint.swift */,
-				16ABD30C2B7A882200B14DFE /* HeroListEndPoint.swift */,
+				16ABD30C2B7A882200B14DFE /* HeroEndPoints.swift */,
 				16ABD32D2B7B9DD100B14DFE /* ImageEndpoint.swift */,
 			);
 			path = "API EndPoints";
@@ -720,7 +714,6 @@
 				1611FDCD2B810B77006A6A78 /* Notification+Name.swift in Sources */,
 				16ABF4EC2B7E69E70081E59B /* CommonModelProtocol.swift in Sources */,
 				16ABD3142B7A8D0700B14DFE /* SquadListResponse.swift in Sources */,
-				16ABF4F32B7E7EC50081E59B /* Resolver.swift in Sources */,
 				16ABD3112B7A89F200B14DFE /* Security.swift in Sources */,
 				16ABD3212B7ABE2400B14DFE /* FetchHeroListUseCase.swift in Sources */,
 				16ABD3302B7BADDE00B14DFE /* Array+Extensions.swift in Sources */,
@@ -729,7 +722,7 @@
 				16ABD3052B7A87B700B14DFE /* ErrorPopupView.swift in Sources */,
 				16ABD3272B7AC7A800B14DFE /* NetworkAssembly.swift in Sources */,
 				16ABD2C22B7A7C3000B14DFE /* TextContent.swift in Sources */,
-				16ABD30D2B7A882200B14DFE /* HeroListEndPoint.swift in Sources */,
+				16ABD30D2B7A882200B14DFE /* HeroEndPoints.swift in Sources */,
 				16ABF4F92B7E85510081E59B /* HeroPersistentModel.swift in Sources */,
 				16ABD2FF2B7A877C00B14DFE /* HTTPClient.swift in Sources */,
 				16ABF4EF2B7E6A140081E59B /* StorageProtocol.swift in Sources */,
@@ -771,7 +764,6 @@
 				16ABF4FD2B7F4F830081E59B /* EditSquadUseCase.swift in Sources */,
 				16ABD2E82B7A82E400B14DFE /* CoordinatorAssembly.swift in Sources */,
 				16ABF4E42B7E62750081E59B /* SwiftDataContainerAssembly.swift in Sources */,
-				16ABF4F52B7E7F1E0081E59B /* Inject.swift in Sources */,
 				1611FDCA2B80072D006A6A78 /* SquadView.swift in Sources */,
 				16ABD2902B7A7BF900B14DFE /* SceneDelegate.swift in Sources */,
 				16ABD2D12B7A7CEE00B14DFE /* SquadButton.swift in Sources */,
@@ -950,7 +942,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "The Superhero Squad Maker/Info.plist";
+				INFOPLIST_FILE = "The Superhero Squad Maker/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -978,7 +970,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "The Superhero Squad Maker/Info.plist";
+				INFOPLIST_FILE = "The Superhero Squad Maker/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";

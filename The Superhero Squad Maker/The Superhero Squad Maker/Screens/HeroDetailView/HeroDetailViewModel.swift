@@ -23,12 +23,12 @@ final class HeroDetailViewModel: ObservableObject {
     @Published var showConfirmationAlert = false
 
     @Published var heroViewModel: Hero
-    private let editSquadUseCase: EditSquadUseCase
+    private let editSquadUseCase: EditSquadUseCaseProtocol
     private let fetchSquadUseCase: FetchSquadUseCaseProtocol
 
     init(
         heroViewModel: Hero,
-        editSquadUseCase: EditSquadUseCase,
+        editSquadUseCase: EditSquadUseCaseProtocol,
         fetchSquadUseCase: FetchSquadUseCaseProtocol
     ) {
         self.heroViewModel = heroViewModel

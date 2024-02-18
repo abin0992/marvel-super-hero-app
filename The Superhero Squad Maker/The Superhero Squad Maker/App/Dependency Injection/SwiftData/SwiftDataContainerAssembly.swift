@@ -28,10 +28,17 @@ final class SwiftDataContainerAssembly: Assembly {
 
     init() {
         do {
+            let configuration = ModelConfiguration(
+                isStoredInMemoryOnly: false,
+                allowsSave: true,
+                cloudKitDatabase: .none
+            )
+
             modelContainer = try ModelContainer(
                 for: HeroPersistentModel.self,
-                configurations: ModelConfiguration()
+                configurations: configuration
             )
+
         } catch {
             fatalError("Failed to create ModelContainer for Hero.")
         }

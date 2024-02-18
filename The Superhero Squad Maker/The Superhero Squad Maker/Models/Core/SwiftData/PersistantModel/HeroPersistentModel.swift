@@ -9,38 +9,19 @@ import Foundation
 import SwiftData
 
 @Model
-final class HeroPersistentModel: Identifiable, Hashable, StorageProtocol {
+final class HeroPersistentModel: Identifiable, Hashable, StorageProtocol, CommonModelProtocol {
     typealias EntityType = Hero
 
-    @Attribute(.unique) public var id: Int
+    @Attribute(.unique) var id: Int
     var name: String
     var heroDescription: String
-    @Relationship(deleteRule: .nullify)
-    var thumbnailModel: ThumbnailPersistantModel
+    @Relationship(deleteRule: .cascade) var thumbnailModel: ThumbnailPersistantModel
 
-    required init(_ entity: Hero) {
+    init(_ entity: Hero) {
         id = entity.id
         name = entity.name
         heroDescription = entity.heroDescription
-        thumbnailModel = ThumbnailPersistantModel(
-            path: entity.thumbnail.path,
-            thumbnailExtension: entity.thumbnail.thumbnailExtension
-        )
-    }
-
-    init(
-        id: Int,
-        name: String,
-        heroDescription: String,
-        thumbnail: Thumbnail
-    ) {
-        self.id = id
-        self.name = name
-        self.heroDescription = heroDescription
-        self.thumbnailModel = ThumbnailPersistantModel(
-            path: thumbnail.path,
-            thumbnailExtension: thumbnail.thumbnailExtension
-        )
+        thumbnailModel = ThumbnailPersistantModel(entity.thumbnail)
     }
 
     func getModel() -> Hero {

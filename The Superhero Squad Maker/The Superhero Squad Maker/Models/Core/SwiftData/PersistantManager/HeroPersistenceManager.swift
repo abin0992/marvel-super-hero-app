@@ -14,4 +14,4 @@ protocol HeroStorageProtocol {
     func delete(_ model: Hero) throws
 }
 
-final class HeroPersistenceManager: BasePersistenceManager<HeroPersistentModel>, HeroStorageProtocol { }
+final class HeroPersistenceManager: BasePersistenceManager<HeroPersistentModel>, HeroStorageProtocol {}

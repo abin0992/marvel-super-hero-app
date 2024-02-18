@@ -8,7 +8,11 @@
 import Combine
 import Foundation
 
-final class EditSquadUseCase {
+protocol EditSquadUseCaseProtocol {
+    func execute(hero: Hero, isInSquad: Bool) -> AnyPublisher<Void, Error>
+}
+
+final class EditSquadUseCase: EditSquadUseCaseProtocol {
 
     private var storageManager: HeroStorageProtocol
 

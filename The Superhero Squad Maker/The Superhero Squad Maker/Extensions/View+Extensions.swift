@@ -21,4 +21,16 @@ extension View {
             }
         }
     }
+
+    func navigationBarColor(
+        backgroundColor: UIColor,
+        foregroundColor: UIColor
+    ) -> some View {
+        self.modifier(
+            NavigationBarColorModifier(
+                backgroundColor: backgroundColor,
+                foregroundColor: foregroundColor
+            )
+        )
+    }
 }

@@ -52,7 +52,7 @@ final class HeroDetailAssembly: Assembly {
         container.register(HeroDetailViewModel.self) { resolver, hero in
             HeroDetailViewModel(
                 heroViewModel: hero,
-                editSquadUseCase: resolver.resolve(EditSquadUseCase.self)!,
+                editSquadUseCase: resolver.resolve(EditSquadUseCaseProtocol.self)!,
                 fetchSquadUseCase: resolver.resolve(FetchSquadUseCaseProtocol.self)!
             )
         }

@@ -74,4 +74,3 @@ final class HTTPClient: HTTPClientProtocol {
         return String(decoding: prettyData, as: UTF8.self)
     }
 }
-

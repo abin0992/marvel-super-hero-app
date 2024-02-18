@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-// Define a custom view modifier
 struct NavigationBarColorModifier: ViewModifier {
     var backgroundColor: UIColor
     var foregroundColor: UIColor
@@ -26,20 +25,5 @@ struct NavigationBarColorModifier: ViewModifier {
                 UINavigationBar.appearance().scrollEdgeAppearance = appearance
                 UINavigationBar.appearance().tintColor = foregroundColor
             }
-    }
-}
-
-// Extension to easily apply the modifier
-extension View {
-    func navigationBarColor(
-        backgroundColor: UIColor,
-        foregroundColor: UIColor
-    ) -> some View {
-        self.modifier(
-            NavigationBarColorModifier(
-                backgroundColor: backgroundColor,
-                foregroundColor: foregroundColor
-            )
-        )
     }
 }

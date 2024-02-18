@@ -9,16 +9,22 @@ import Foundation
 import SwiftData
 
 @Model
-class ThumbnailPersistantModel {
+final class ThumbnailPersistantModel: Identifiable, Hashable, StorageProtocol {
 
-    let path: String
-    let thumbnailExtension: String
+    typealias EntityType = Thumbnail
 
-    init(
-        path: String,
-        thumbnailExtension: String
-    ) {
-        self.path = path
-        self.thumbnailExtension = thumbnailExtension
+    @Attribute(.unique) var path: String
+    var thumbnailExtension: String
+
+    init(_ entity: Thumbnail) {
+        self.path = entity.path
+        self.thumbnailExtension = entity.thumbnailExtension
+    }
+
+    func getModel() -> Thumbnail {
+        Thumbnail(
+            path: path,
+            thumbnailExtension: thumbnailExtension
+        )
     }
 }

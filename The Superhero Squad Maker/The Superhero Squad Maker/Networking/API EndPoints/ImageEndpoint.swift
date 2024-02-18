@@ -10,22 +10,10 @@ import Foundation
 // MARK: - EndPoint
 
 struct ImageEndpoint: URLConfig {
-    let basePath: String
-    let size: String
-    let fileExtension: String
 
-    var url: URL {
-
-        let urlString = "\(basePath)/\(size).\(fileExtension)"
-
-        guard let url = URL(string: urlString) else {
-            preconditionFailure(
-                "Invalid URL"
-            )
-        }
-
-        return url
-    }
+    private let basePath: String
+    private let size: String
+    private let fileExtension: String
 
     init(
         basePath: String,
@@ -35,5 +23,16 @@ struct ImageEndpoint: URLConfig {
         self.basePath = basePath
         self.size = size.rawValue
         self.fileExtension = fileExtension
+    }
+
+    var url: URL {
+
+        let urlString = "\(basePath)/\(size).\(fileExtension)"
+        guard let url = URL(string: urlString) else {
+            preconditionFailure(
+                "Invalid URL"
+            )
+        }
+        return url
     }
 }

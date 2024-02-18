@@ -8,5 +8,5 @@
 import Foundation
 
 protocol CommonModelProtocol {
-    var name: String { get }
+    var id: Int { get }
 }

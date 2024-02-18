@@ -34,4 +34,3 @@ final class HeroService: HeroFetchable {
         .eraseToAnyPublisher()
     }
 }
-
