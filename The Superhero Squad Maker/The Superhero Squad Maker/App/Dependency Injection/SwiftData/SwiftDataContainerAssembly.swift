@@ -22,23 +22,13 @@ final class SwiftDataContainerAssembly: Assembly {
 
     private var modelContainer: ModelContainer
 
-    private lazy var context: ModelContext = {
-        return modelContainer.mainContext
-    }()
+    private lazy var context: ModelContext = modelContainer.mainContext
 
     init() {
         do {
-            let configuration = ModelConfiguration(
-                isStoredInMemoryOnly: false,
-                allowsSave: true,
-                cloudKitDatabase: .none
-            )
-
             modelContainer = try ModelContainer(
-                for: HeroPersistentModel.self,
-                configurations: configuration
-            )
-
+                for: HeroPersistentModel.self, ThumbnailPersistantModel.self,
+                configurations: ModelConfiguration(isStoredInMemoryOnly: false))
         } catch {
             fatalError("Failed to create ModelContainer for Hero.")
         }
@@ -48,5 +38,6 @@ final class SwiftDataContainerAssembly: Assembly {
         container.register(HeroStorageProtocol.self) { _ in
             HeroPersistenceManager(context: self.context)
         }
+        .inObjectScope(.container)
     }
 }

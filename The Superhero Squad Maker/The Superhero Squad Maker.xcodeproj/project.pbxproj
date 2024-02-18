@@ -287,6 +287,14 @@
 			path = PersistanceTests;
 			sourceTree = "<group>";
 		};
+		164F180A2B82B2B6007EE502 /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+				16ABF4E62B7E65F70081E59B /* SwiftData */,
+			);
+			path = Persistance;
+			sourceTree = "<group>";
+		};
 		16ABD2812B7A7BF900B14DFE = {
 			isa = PBXGroup;
 			children = (
@@ -313,6 +321,7 @@
 				16ABD2C52B7A7C6700B14DFE /* Extensions */,
 				16ABD2BE2B7A7C0900B14DFE /* Models */,
 				16ABD2FD2B7A876600B14DFE /* Networking */,
+				164F180A2B82B2B6007EE502 /* Persistance */,
 				16ABD2C42B7A7C4500B14DFE /* Resources */,
 				16ABD2DD2B7A7F8100B14DFE /* Screens */,
 				16ABD2BD2B7A7C0200B14DFE /* UIComponents */,
@@ -324,14 +333,14 @@
 		16ABD2A32B7A7BFA00B14DFE /* The Superhero Squad MakerTests */ = {
 			isa = PBXGroup;
 			children = (
-				1611FDF42B8267AD006A6A78 /* PersistanceTests */,
-				1611FDED2B823177006A6A78 /* ViewModelTests */,
-				1611FDEA2B82303D006A6A78 /* ServiceTests */,
-				1611FDDE2B8223F8006A6A78 /* UseCaseTests */,
 				1611FDDB2B822168006A6A78 /* Mocks */,
-				1611FDD22B821A73006A6A78 /* TestUtilities */,
-				1611FDCF2B821A2C006A6A78 /* Stubs */,
 				1611FDCE2B821855006A6A78 /* ModelTests */,
+				1611FDF42B8267AD006A6A78 /* PersistanceTests */,
+				1611FDEA2B82303D006A6A78 /* ServiceTests */,
+				1611FDCF2B821A2C006A6A78 /* Stubs */,
+				1611FDD22B821A73006A6A78 /* TestUtilities */,
+				1611FDDE2B8223F8006A6A78 /* UseCaseTests */,
+				1611FDED2B823177006A6A78 /* ViewModelTests */,
 			);
 			path = "The Superhero Squad MakerTests";
 			sourceTree = "<group>";
@@ -445,7 +454,6 @@
 		16ABD2EB2B7A83D200B14DFE /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				16ABF4E62B7E65F70081E59B /* SwiftData */,
 				16ABD3332B7BAE3100B14DFE /* Error */,
 				16ABD2EF2B7A83EA00B14DFE /* AppConfiguration.swift */,
 				16ABD2EC2B7A83EA00B14DFE /* DomainResult.swift */,

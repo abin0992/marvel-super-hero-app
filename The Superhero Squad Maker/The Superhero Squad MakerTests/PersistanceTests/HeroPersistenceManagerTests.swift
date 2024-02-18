@@ -10,23 +10,23 @@ import XCTest
 
 final class HeroPersistenceManagerTests: XCTestCase {
 
-    private var mockHeroStorage: MockHeroStorage!
+    private var systemUnderTest: MockHeroStorage!
 
     override func setUp() {
         super.setUp()
-        mockHeroStorage = MockHeroStorage()
+        systemUnderTest = MockHeroStorage()
     }
 
     override func tearDown() {
-        mockHeroStorage = nil
+        systemUnderTest = nil
         super.tearDown()
     }
 
     func testInsert() {
         let hero = TestUtilities.testHero
         do {
-            try mockHeroStorage.save(hero)
-            let recordFromDb = try mockHeroStorage.fetch().filter { $0.id == hero.id }.first
+            try systemUnderTest.save(hero)
+            let recordFromDb = try systemUnderTest.fetch().filter { $0.id == hero.id }.first
             XCTAssertTrue(recordFromDb == hero)
         } catch {
             XCTFail("Error occured \(error)")
