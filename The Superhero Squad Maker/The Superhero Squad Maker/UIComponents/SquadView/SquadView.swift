@@ -14,14 +14,14 @@ struct SquadView: View {
 
     var body: some View {
 
-        VStack(alignment: .leading, spacing: .xSmall) {
+        VStack(alignment: .leading, spacing: Margins.xSmall) {
             Text(TextContent.mySquadTitle)
                 .font(.title3)
                 .bold()
                 .foregroundColor(.white)
 
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: .medium) {
+                HStack(spacing: Margins.medium) {
                     ForEach($heroList) { hero in
                         SquadMemberView(heroViewModel: hero)
                             .listRowBackground(Color.greyDark)
@@ -35,8 +35,8 @@ struct SquadView: View {
             }
         }
         .frame(height: 157)
-        .padding(.horizontal, .medium)
-        .padding(.top, .medium)
+        .padding(.horizontal, Margins.medium)
+        .padding(.top, Margins.medium)
     }
 }
 
@@ -45,5 +45,5 @@ struct SquadView: View {
     @State var previewHeroes = DeveloperPreview.previewHeroList.data.results
 
     return SquadView(heroList: $previewHeroes) { _ in }
+        .preferredColorScheme(.dark)
 }
-

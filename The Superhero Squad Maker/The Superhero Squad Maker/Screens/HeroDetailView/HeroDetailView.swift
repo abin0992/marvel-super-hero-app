@@ -17,7 +17,7 @@ struct HeroDetailView: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: .medium) {
+            VStack(alignment: .leading, spacing: Margins.medium) {
 
                 ImageFromUrlView(
                     basePath: viewModel.heroViewModel.thumbnail.path,
@@ -31,7 +31,7 @@ struct HeroDetailView: View {
                     .font(.largeTitle)
                     .bold()
                     .foregroundColor(.white)
-                    .padding(.horizontal, .medium)
+                    .padding(.horizontal, Margins.medium)
 
                 SquadButton(isInSquad: $viewModel.isInMySquad) {
                     if viewModel.isInMySquad {
@@ -44,7 +44,7 @@ struct HeroDetailView: View {
                 Text(viewModel.heroViewModel.heroDescription)
                     .font(.body)
                     .foregroundColor(.white)
-                    .padding(.horizontal, .medium)
+                    .padding(.horizontal, Margins.medium)
 
                 Spacer()
             }
@@ -67,7 +67,7 @@ struct HeroDetailView: View {
     }
 }
 
-
-//#Preview {
-//    HeroDetailView()
-//}
+#Preview {
+    HeroDetailView(viewModel: DeveloperPreview.previewHeroDetailViewModel)
+        .preferredColorScheme(.dark)
+}

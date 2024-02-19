@@ -43,4 +43,5 @@ struct HeroListView: View {
     @State var previewHeroes = DeveloperPreview.previewHeroList.data.results
 
     return HeroListView(heroList: $previewHeroes) {} didSelectHero: { _ in}
+        .preferredColorScheme(.dark)
 }

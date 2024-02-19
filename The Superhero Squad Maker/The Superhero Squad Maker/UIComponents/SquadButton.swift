@@ -16,19 +16,19 @@ struct SquadButton: View {
                 .fontWeight(.semibold)
             }
         )
-        .frame(height: .large)
+        .frame(height: Margins.large)
         .frame(maxWidth: .infinity)
         .foregroundColor(.white)
         .background(isInSquad ? .clear : .redLight)
-        .cornerRadius(.small)
-        .shadow(color: .redHighlight, radius: .medium)
+        .cornerRadius(Margins.small)
+        .shadow(color: .redHighlight, radius: Margins.medium)
         .overlay(
-            RoundedRectangle(cornerRadius: .small)
+            RoundedRectangle(cornerRadius: Margins.small)
                 .stroke(
                     isInSquad ? Color.redLight : .clear,
-                    style: StrokeStyle(lineWidth: .xSmall)
+                    style: StrokeStyle(lineWidth: Margins.xSmall)
                 )
         )
-        .padding(.horizontal, .medium)
+        .padding(.horizontal, Margins.medium)
     }
 }

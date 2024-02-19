@@ -21,12 +21,13 @@ struct HomeView: View {
                 switch viewModel.state {
                 case .data, .loading:
                     ZStack {
-                        VStack (spacing: .medium) {
+                        VStack(spacing: Margins.medium) {
                             if !viewModel.squad.isEmpty {
                                 SquadView(
-                                    heroList: $viewModel.squad) { hero in
+                                    heroList: $viewModel.squad
+                                ) { hero in
                                         viewModel.output.send(hero)
-                                    }
+                                }
                             }
 
                             HeroListView(heroList: $viewModel.allHeros) {
@@ -58,10 +59,10 @@ struct HomeView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .principal) {
-                    Image("marvel-logo-nav") // Your image name
+                    Image("marvel-logo-nav")
                         .resizable()
                         .scaledToFit()
-                        .frame(height: 32) // Adjust the frame as needed
+                        .frame(height: Margins.mediumLarge)
                 }
             }
         }
@@ -74,4 +75,5 @@ struct HomeView: View {
 
 #Preview {
     HomeView(viewModel: DeveloperPreview.previewHomeViewModel)
+        .preferredColorScheme(.dark)
 }

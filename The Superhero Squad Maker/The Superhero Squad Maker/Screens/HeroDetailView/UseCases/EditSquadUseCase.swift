@@ -44,3 +44,11 @@ private extension EditSquadUseCase {
         .eraseToAnyPublisher()
     }
 }
+
+final class PreviewEditSquadUseCase: EditSquadUseCaseProtocol {
+    func execute(hero: Hero, isInSquad: Bool) -> AnyPublisher<Void, Error> {
+        Just(())
+            .setFailureType(to: Error.self)
+            .eraseToAnyPublisher()
+    }
+}

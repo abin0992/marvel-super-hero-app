@@ -12,8 +12,8 @@ struct SquadMemberView: View {
                 fileExtension: heroViewModel.thumbnail.thumbnailExtension
             )
                 .clipShape(Circle())
-                .frame(width: .xLarge, height: .xLarge)
-                .padding(.all, .medium)
+                .frame(width: Margins.xLarge, height: Margins.xLarge)
+                .padding(.all, Margins.medium)
 
             VStack {
                 Text(heroViewModel.name)
@@ -24,12 +24,14 @@ struct SquadMemberView: View {
 
                 Spacer()
             }
-            .frame(height: .large)
+            .frame(height: Margins.large)
         }
-        .frame(maxWidth: .xLarge)
+        .frame(maxWidth: Margins.xLarge)
     }
 }
 
-//#Preview {
-//    SquadView()
-//}
+#Preview {
+    @State var viewModel = DeveloperPreview.sampleHero
+    return SquadMemberView(heroViewModel: $viewModel)
+        .preferredColorScheme(.dark)
+}

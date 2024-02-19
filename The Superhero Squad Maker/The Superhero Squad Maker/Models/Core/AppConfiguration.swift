@@ -13,3 +13,12 @@ struct AppConfiguration {
     static let privateKey: String = "8f8fa0e7fe8b333dc0ab726c84ed01991b4e7fd4"
     static let paginationLimit: String = "50"
 }
+
+enum Margins {
+    static let xSmall: CGFloat = 2.0
+    static let small: CGFloat = 8.0
+    static let medium: CGFloat = 16.0
+    static let mediumLarge: CGFloat = 32.0
+    static let large: CGFloat = 48.0
+    static let xLarge: CGFloat = 64.0
+}

@@ -13,8 +13,8 @@ struct HeroListItemView: View {
                 fileExtension: heroViewModel.thumbnail.thumbnailExtension
             )
                 .clipShape(Circle())
-                .frame(width: .large, height: .large)
-                .padding(.all, .medium)
+                .frame(width: Margins.large, height: Margins.large)
+                .padding(.all, Margins.medium)
 
             Text(heroViewModel.name)
                 .foregroundColor(.white)
@@ -25,10 +25,10 @@ struct HeroListItemView: View {
             Spacer()
 
             Image.chevronImage
-                .padding(.horizontal, .medium)
+                .padding(.horizontal, Margins.medium)
                 .foregroundColor(Color.greyLight)
         }
         .background(Color.greyMedium)
-        .cornerRadius(.small)
+        .cornerRadius(Margins.small)
     }
 }
