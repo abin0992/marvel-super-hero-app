@@ -36,7 +36,11 @@ final class SwiftDataContainerAssembly: Assembly {
 
     func assemble(container: Container) {
         container.register(HeroStorageProtocol.self) { _ in
-            HeroPersistenceManager(context: self.context)
+            if Features.isSwiftDataEnabled {
+                return HeroPersistenceManager(context: self.context)
+            } else {
+                return HeroRealmManager()
+            }
         }
         .inObjectScope(.container)
     }

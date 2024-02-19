@@ -12,7 +12,7 @@ import SwiftData
 final class HeroPersistentModel: Identifiable, Hashable, StorageProtocol, CommonModelProtocol {
     typealias EntityType = Hero
 
-    @Attribute(.unique) var id: Int
+    @Attribute(.unique) var id: String
     var name: String
     var heroDescription: String
     @Relationship(deleteRule: .cascade) var thumbnailModel: ThumbnailPersistantModel

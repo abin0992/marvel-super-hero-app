@@ -15,7 +15,7 @@ final class DeveloperPreview {
     private init() {}
 
     static let sampleHero = Hero(
-        id: 1,
+        id: "1",
         name: "Iron man",
         heroDescription: "Tony Stark is a genius inventor and billionaire industrialist, who suits up in his armor of cutting-edge technology to become the super hero Iron Man.",
         thumbnail: Thumbnail(

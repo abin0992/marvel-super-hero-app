@@ -9,4 +9,5 @@ import Foundation
 
 enum Features {
     static let isDetailScreenEnabled = true
+    static let isSwiftDataEnabled = false
 }

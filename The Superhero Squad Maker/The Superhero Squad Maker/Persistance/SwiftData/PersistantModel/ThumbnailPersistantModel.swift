@@ -9,14 +9,16 @@ import Foundation
 import SwiftData
 
 @Model
-final class ThumbnailPersistantModel: Identifiable, Hashable, StorageProtocol {
+final class ThumbnailPersistantModel: Identifiable, Hashable, StorageProtocol, CommonModelProtocol {
 
     typealias EntityType = Thumbnail
 
-    @Attribute(.unique) var path: String
+    @Attribute(.unique) var id: String
+    var path: String
     var thumbnailExtension: String
 
     init(_ entity: Thumbnail) {
+        id = UUID().uuidString
         self.path = entity.path
         self.thumbnailExtension = entity.thumbnailExtension
     }

@@ -12,6 +12,7 @@ protocol HeroStorageProtocol {
     func save(_ model: Hero) throws
     func fetch() throws -> [Hero]
     func delete(_ model: Hero) throws
+    func fetchObject(by id: String) -> Hero?
 }
 
 final class HeroPersistenceManager: BasePersistenceManager<HeroPersistentModel>, HeroStorageProtocol {}

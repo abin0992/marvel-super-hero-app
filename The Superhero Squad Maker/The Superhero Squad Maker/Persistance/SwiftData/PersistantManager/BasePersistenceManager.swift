@@ -44,4 +44,8 @@ class BasePersistenceManager<T>: ManagerProtocol where T: StorageProtocol, T: Pe
             DLog(error.localizedDescription)
         }
     }
+
+    func fetchObject(by id: String) -> EntityType? {
+        return nil
+    }
 }

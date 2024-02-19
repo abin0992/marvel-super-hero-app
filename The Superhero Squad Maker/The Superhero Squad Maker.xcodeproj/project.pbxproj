@@ -27,6 +27,11 @@
 		1611FDF12B8232D5006A6A78 /* MockUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1611FDF02B8232D5006A6A78 /* MockUseCases.swift */; };
 		1611FDF32B8235C4006A6A78 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1611FDF22B8235C4006A6A78 /* HomeViewModelTests.swift */; };
 		1611FDF62B8267C0006A6A78 /* HeroPersistenceManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1611FDF52B8267C0006A6A78 /* HeroPersistenceManagerTests.swift */; };
+		163135082B83ABD900A3F1CC /* BaseRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163135072B83ABD900A3F1CC /* BaseRealmManager.swift */; };
+		1631350B2B83AC1F00A3F1CC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1631350A2B83AC1F00A3F1CC /* RealmSwift */; };
+		1631350E2B83ACA000A3F1CC /* HeroRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1631350D2B83ACA000A3F1CC /* HeroRealmManager.swift */; };
+		163135112B83ACDB00A3F1CC /* HeroRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163135102B83ACDB00A3F1CC /* HeroRealmModel.swift */; };
+		163135132B83AE9A00A3F1CC /* ThumbnailRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163135122B83AE9A00A3F1CC /* ThumbnailRealmModel.swift */; };
 		16ABD28E2B7A7BF900B14DFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD28D2B7A7BF900B14DFE /* AppDelegate.swift */; };
 		16ABD2902B7A7BF900B14DFE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD28F2B7A7BF900B14DFE /* SceneDelegate.swift */; };
 		16ABD2972B7A7BFA00B14DFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16ABD2962B7A7BFA00B14DFE /* Assets.xcassets */; };
@@ -117,6 +122,10 @@
 		1611FDF02B8232D5006A6A78 /* MockUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUseCases.swift; sourceTree = "<group>"; };
 		1611FDF22B8235C4006A6A78 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		1611FDF52B8267C0006A6A78 /* HeroPersistenceManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroPersistenceManagerTests.swift; sourceTree = "<group>"; };
+		163135072B83ABD900A3F1CC /* BaseRealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRealmManager.swift; sourceTree = "<group>"; };
+		1631350D2B83ACA000A3F1CC /* HeroRealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroRealmManager.swift; sourceTree = "<group>"; };
+		163135102B83ACDB00A3F1CC /* HeroRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroRealmModel.swift; sourceTree = "<group>"; };
+		163135122B83AE9A00A3F1CC /* ThumbnailRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailRealmModel.swift; sourceTree = "<group>"; };
 		16ABD28A2B7A7BF900B14DFE /* The Superhero Squad Maker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Superhero Squad Maker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16ABD28D2B7A7BF900B14DFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16ABD28F2B7A7BF900B14DFE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -183,6 +192,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1631350B2B83AC1F00A3F1CC /* RealmSwift in Frameworks */,
 				16ABD32C2B7B82E500B14DFE /* SDWebImageSwiftUI in Frameworks */,
 				1611FDC62B7FEF32006A6A78 /* CombineExt in Frameworks */,
 				16ABD2E22B7A7FDB00B14DFE /* Swinject in Frameworks */,
@@ -285,9 +295,37 @@
 			path = PersistanceTests;
 			sourceTree = "<group>";
 		};
+		163135062B83ABA500A3F1CC /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				1631350F2B83ACBD00A3F1CC /* PersistantModels */,
+				1631350C2B83AC8400A3F1CC /* RealmManager */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		1631350C2B83AC8400A3F1CC /* RealmManager */ = {
+			isa = PBXGroup;
+			children = (
+				163135072B83ABD900A3F1CC /* BaseRealmManager.swift */,
+				1631350D2B83ACA000A3F1CC /* HeroRealmManager.swift */,
+			);
+			path = RealmManager;
+			sourceTree = "<group>";
+		};
+		1631350F2B83ACBD00A3F1CC /* PersistantModels */ = {
+			isa = PBXGroup;
+			children = (
+				163135102B83ACDB00A3F1CC /* HeroRealmModel.swift */,
+				163135122B83AE9A00A3F1CC /* ThumbnailRealmModel.swift */,
+			);
+			path = PersistantModels;
+			sourceTree = "<group>";
+		};
 		164F180A2B82B2B6007EE502 /* Persistance */ = {
 			isa = PBXGroup;
 			children = (
+				163135062B83ABA500A3F1CC /* Realm */,
 				16ABF4E62B7E65F70081E59B /* SwiftData */,
 			);
 			path = Persistance;
@@ -672,6 +710,7 @@
 				16ABD2E12B7A7FDB00B14DFE /* Swinject */,
 				16ABD32B2B7B82E500B14DFE /* SDWebImageSwiftUI */,
 				1611FDC52B7FEF32006A6A78 /* CombineExt */,
+				1631350A2B83AC1F00A3F1CC /* RealmSwift */,
 			);
 			productName = "The Superhero Squad Maker";
 			productReference = 16ABD28A2B7A7BF900B14DFE /* The Superhero Squad Maker.app */;
@@ -727,6 +766,7 @@
 				16ABD2D72B7A7EF600B14DFE /* XCRemoteSwiftPackageReference "Swinject" */,
 				16ABD32A2B7B82E500B14DFE /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				1611FDC42B7FEF32006A6A78 /* XCRemoteSwiftPackageReference "CombineExt" */,
+				163135092B83AC1F00A3F1CC /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 16ABD28B2B7A7BF900B14DFE /* Products */;
 			projectDirPath = "";
@@ -797,6 +837,8 @@
 				16ABD3272B7AC7A800B14DFE /* NetworkAssembly.swift in Sources */,
 				16ABD2C22B7A7C3000B14DFE /* TextContent.swift in Sources */,
 				16ABD30D2B7A882200B14DFE /* HeroEndPoints.swift in Sources */,
+				1631350E2B83ACA000A3F1CC /* HeroRealmManager.swift in Sources */,
+				163135082B83ABD900A3F1CC /* BaseRealmManager.swift in Sources */,
 				16ABF4F92B7E85510081E59B /* HeroPersistentModel.swift in Sources */,
 				1611FDDA2B8220E3006A6A78 /* Thumbnail.swift in Sources */,
 				16ABD2FF2B7A877C00B14DFE /* HTTPClient.swift in Sources */,
@@ -828,6 +870,7 @@
 				16ABF4D32B7C12C10081E59B /* HeroDetailViewModel.swift in Sources */,
 				16ABD2F22B7A83EA00B14DFE /* StateModel.swift in Sources */,
 				16ABD2F32B7A83EA00B14DFE /* ClientError.swift in Sources */,
+				163135112B83ACDB00A3F1CC /* HeroRealmModel.swift in Sources */,
 				16ABD30F2B7A88E200B14DFE /* AuthenticationProtocol.swift in Sources */,
 				16ABD33C2B7BB83000B14DFE /* HeroDetailView.swift in Sources */,
 				16ABD33E2B7BD1A600B14DFE /* ImageFromUrlView.swift in Sources */,
@@ -839,6 +882,7 @@
 				16ABF4FD2B7F4F830081E59B /* EditSquadUseCase.swift in Sources */,
 				16ABD2E82B7A82E400B14DFE /* CoordinatorAssembly.swift in Sources */,
 				16ABF4E42B7E62750081E59B /* SwiftDataContainerAssembly.swift in Sources */,
+				163135132B83AE9A00A3F1CC /* ThumbnailRealmModel.swift in Sources */,
 				1611FDCA2B80072D006A6A78 /* SquadView.swift in Sources */,
 				16ABD2902B7A7BF900B14DFE /* SceneDelegate.swift in Sources */,
 				16ABD2D12B7A7CEE00B14DFE /* SquadButton.swift in Sources */,
@@ -1144,6 +1188,14 @@
 				minimumVersion = 1.8.1;
 			};
 		};
+		163135092B83AC1F00A3F1CC /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		16ABD2D72B7A7EF600B14DFE /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject";
@@ -1167,6 +1219,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1611FDC42B7FEF32006A6A78 /* XCRemoteSwiftPackageReference "CombineExt" */;
 			productName = CombineExt;
+		};
+		1631350A2B83AC1F00A3F1CC /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 163135092B83AC1F00A3F1CC /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 		16ABD2E12B7A7FDB00B14DFE /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
