@@ -32,7 +32,7 @@ final class MockFetchHeroListUseCase: FetchHeroListUseCaseProtocol {
             count: 0,
             results: [
                 Hero(
-                    id: 1,
+                    id: "1",
                     name: "Iron man",
                     heroDescription: "Tony Stark is a genius inventor and billionaire industrialist, who suits up in his armor of cutting-edge technology to become the super hero Iron Man.",
                     thumbnail: Thumbnail(

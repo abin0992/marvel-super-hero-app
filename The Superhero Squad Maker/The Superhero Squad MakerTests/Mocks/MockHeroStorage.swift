@@ -29,4 +29,8 @@ final class MockHeroStorage: HeroStorageProtocol {
     func delete(_ model: Hero) throws {
         if shouldThrowError { throw ClientError.persistanceError }
     }
+
+    func fetchObject(by id: String) -> Hero? {
+        heroes.first(where: { $0.id == id })
+    }
 }

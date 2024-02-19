@@ -16,7 +16,6 @@ final class HeroDetailViewModel: ObservableObject {
     let didTapUpdateSquad = PassthroughSubject<Void, Never>()
     private var cancellables = Set<AnyCancellable>()
 
-    private lazy var fetchMySquad = fetchSquadUseCase.execute()
     private lazy var editSquadResult = makeEditSquadResult()
 
     @Published var isInMySquad = false
@@ -24,16 +23,16 @@ final class HeroDetailViewModel: ObservableObject {
 
     @Published var heroViewModel: Hero
     private let editSquadUseCase: EditSquadUseCaseProtocol
-    private let fetchSquadUseCase: FetchSquadUseCaseProtocol
+    private let fetchHeroUseCase: FetchHeroUseCaseProtocol
 
     init(
         heroViewModel: Hero,
         editSquadUseCase: EditSquadUseCaseProtocol,
-        fetchSquadUseCase: FetchSquadUseCaseProtocol
+        fetchHeroUseCase: FetchHeroUseCaseProtocol
     ) {
         self.heroViewModel = heroViewModel
         self.editSquadUseCase = editSquadUseCase
-        self.fetchSquadUseCase = fetchSquadUseCase
+        self.fetchHeroUseCase = fetchHeroUseCase
 
         setUpBindings()
     }
@@ -46,9 +45,12 @@ private extension HeroDetailViewModel {
     }
 
     func bindSquadButton() {
-        fetchMySquad
-            .map { [heroViewModel] mySquad -> Bool in
-                mySquad.contains(where: { $0.id == heroViewModel.id })
+        fetchHeroUseCase.execute(id: heroViewModel.id)
+            .map { result -> Bool in
+                guard let result else {
+                    return false
+                }
+                return true
             }
             .replaceError(with: false)
             .assign(to: &$isInMySquad)

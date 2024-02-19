@@ -32,6 +32,8 @@
 		1631350E2B83ACA000A3F1CC /* HeroRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1631350D2B83ACA000A3F1CC /* HeroRealmManager.swift */; };
 		163135112B83ACDB00A3F1CC /* HeroRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163135102B83ACDB00A3F1CC /* HeroRealmModel.swift */; };
 		163135132B83AE9A00A3F1CC /* ThumbnailRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163135122B83AE9A00A3F1CC /* ThumbnailRealmModel.swift */; };
+		163135152B83BCCC00A3F1CC /* FetchHeroUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163135142B83BCCC00A3F1CC /* FetchHeroUseCase.swift */; };
+		163135172B83C09600A3F1CC /* FetchHeroUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163135162B83C09600A3F1CC /* FetchHeroUseCaseTests.swift */; };
 		16ABD28E2B7A7BF900B14DFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD28D2B7A7BF900B14DFE /* AppDelegate.swift */; };
 		16ABD2902B7A7BF900B14DFE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD28F2B7A7BF900B14DFE /* SceneDelegate.swift */; };
 		16ABD2972B7A7BFA00B14DFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16ABD2962B7A7BFA00B14DFE /* Assets.xcassets */; };
@@ -126,6 +128,8 @@
 		1631350D2B83ACA000A3F1CC /* HeroRealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroRealmManager.swift; sourceTree = "<group>"; };
 		163135102B83ACDB00A3F1CC /* HeroRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroRealmModel.swift; sourceTree = "<group>"; };
 		163135122B83AE9A00A3F1CC /* ThumbnailRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailRealmModel.swift; sourceTree = "<group>"; };
+		163135142B83BCCC00A3F1CC /* FetchHeroUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchHeroUseCase.swift; sourceTree = "<group>"; };
+		163135162B83C09600A3F1CC /* FetchHeroUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchHeroUseCaseTests.swift; sourceTree = "<group>"; };
 		16ABD28A2B7A7BF900B14DFE /* The Superhero Squad Maker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Superhero Squad Maker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16ABD28D2B7A7BF900B14DFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16ABD28F2B7A7BF900B14DFE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -259,6 +263,7 @@
 				1611FDE02B822450006A6A78 /* FetchHeroListUseCaseTests.swift */,
 				1611FDE42B8229E3006A6A78 /* FetchSquadUseCaseTests.swift */,
 				1611FDE62B822C94006A6A78 /* EditSquadUseCaseTests.swift */,
+				163135162B83C09600A3F1CC /* FetchHeroUseCaseTests.swift */,
 			);
 			path = UseCaseTests;
 			sourceTree = "<group>";
@@ -685,6 +690,7 @@
 			isa = PBXGroup;
 			children = (
 				16ABF4FC2B7F4F830081E59B /* EditSquadUseCase.swift */,
+				163135142B83BCCC00A3F1CC /* FetchHeroUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -872,6 +878,7 @@
 				16ABD2F32B7A83EA00B14DFE /* ClientError.swift in Sources */,
 				163135112B83ACDB00A3F1CC /* HeroRealmModel.swift in Sources */,
 				16ABD30F2B7A88E200B14DFE /* AuthenticationProtocol.swift in Sources */,
+				163135152B83BCCC00A3F1CC /* FetchHeroUseCase.swift in Sources */,
 				16ABD33C2B7BB83000B14DFE /* HeroDetailView.swift in Sources */,
 				16ABD33E2B7BD1A600B14DFE /* ImageFromUrlView.swift in Sources */,
 				16ABD32E2B7B9DD100B14DFE /* ImageEndpoint.swift in Sources */,
@@ -895,6 +902,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				163135172B83C09600A3F1CC /* FetchHeroUseCaseTests.swift in Sources */,
 				1611FDEC2B823046006A6A78 /* HeroServiceTests.swift in Sources */,
 				1611FDE92B82301C006A6A78 /* MockHTTPClient.swift in Sources */,
 				1611FDE32B822904006A6A78 /* MockHeroStorage.swift in Sources */,

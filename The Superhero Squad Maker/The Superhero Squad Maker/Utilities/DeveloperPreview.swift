@@ -44,6 +44,6 @@ final class DeveloperPreview {
     static let previewHeroDetailViewModel = HeroDetailViewModel(
         heroViewModel: sampleHero,
         editSquadUseCase: PreviewEditSquadUseCase(),
-        fetchSquadUseCase: PreviewFetchSquadUseCase()
+        fetchHeroUseCase: PreviewFetchHeroUseCase()
     )
 }

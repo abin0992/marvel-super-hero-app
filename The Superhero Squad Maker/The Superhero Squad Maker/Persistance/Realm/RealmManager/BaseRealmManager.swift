@@ -61,7 +61,7 @@ class BaseRealmManager<T>: ManagerProtocol where T: StorageProtocol, T: Object, 
             else {
                 return nil
             }
-            return modelObject as? BaseRealmManager<T>.EntityType
+            return modelObject.getModel()
         } catch {
             return nil
         }

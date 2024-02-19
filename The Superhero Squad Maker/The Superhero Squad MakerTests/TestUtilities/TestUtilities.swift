@@ -23,8 +23,18 @@ final class TestUtilities {
         }
     }
 
+    static func data(fromJSON fileName: String) -> Data {
+        guard 
+            let url = Bundle(for: TestUtilities.self).url(forResource: fileName, withExtension: "json"),
+              let data = try? Data(contentsOf: url)
+        else {
+            fatalError("Failed to load \(fileName).json from test bundle.")
+        }
+        return data
+    }
+
     static let testHero = Hero(
-        id: 1,
+        id: "1",
         name: "Test Hero",
         heroDescription: "A hero for testing purposes",
         thumbnail: Thumbnail(

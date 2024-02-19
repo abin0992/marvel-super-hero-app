@@ -23,17 +23,8 @@ final class EditSquadUseCaseTests: XCTestCase {
     func testExecute_AddsHeroToSquad() {
         let expectation = XCTestExpectation(description: "Adds hero to squad")
         let useCase = EditSquadUseCase(storageManager: mockHeroStorage)
-        let hero = Hero(
-            id: 1,
-            name: "Test Hero",
-            heroDescription: "",
-            thumbnail: Thumbnail(
-                path: "",
-                thumbnailExtension: ""
-            )
-        )
 
-        useCase.execute(hero: hero, isInSquad: false)
+        useCase.execute(hero: TestUtilities.testHero, isInSquad: false)
             .sink(
                 receiveCompletion: { completion in
                     switch completion {
@@ -51,17 +42,8 @@ final class EditSquadUseCaseTests: XCTestCase {
     func testExecute_RemovesHeroFromSquad() {
         let expectation = XCTestExpectation(description: "Removes hero from squad")
         let useCase = EditSquadUseCase(storageManager: mockHeroStorage)
-        let hero = Hero(
-            id: 1,
-            name: "Test Hero",
-            heroDescription: "",
-            thumbnail: Thumbnail(
-                path: "",
-                thumbnailExtension: ""
-            )
-        )
 
-        useCase.execute(hero: hero, isInSquad: true)
+        useCase.execute(hero: TestUtilities.testHero, isInSquad: true)
             .sink(
                 receiveCompletion: { completion in
                     switch completion {
@@ -81,17 +63,8 @@ final class EditSquadUseCaseTests: XCTestCase {
         let expectation = XCTestExpectation(description: "Operation fails with error")
         mockHeroStorage.shouldThrowError = true
         let useCase = EditSquadUseCase(storageManager: mockHeroStorage)
-        let hero = Hero(
-            id: 1,
-            name: "Test Hero",
-            heroDescription: "",
-            thumbnail: Thumbnail(
-                path: "",
-                thumbnailExtension: ""
-            )
-        )
 
-        useCase.execute(hero: hero, isInSquad: false)
+        useCase.execute(hero: TestUtilities.testHero, isInSquad: false)
             .sink(
                 receiveCompletion: { completion in
                     switch completion {

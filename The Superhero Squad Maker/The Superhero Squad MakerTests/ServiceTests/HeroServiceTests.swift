@@ -22,17 +22,9 @@ final class HeroServiceTests: XCTestCase {
         let service = HeroService(httpClient: httpClient)
 
         // Simulate successful network response
-        let stubbedResponse = TestUtilities.load(
-            fromJSON: "hero_list_sample",
-            type: HeroListResponse.self
-        )
+        let stubbedResponseData = TestUtilities.data(fromJSON: "hero_list_sample")
 
-        let encoder = JSONEncoder()
-        guard let responseData = try? encoder.encode(stubbedResponse) else {
-            XCTFail("Failed to encode mock response")
-            return
-        }
-        httpClient.responseData = responseData
+        httpClient.responseData = stubbedResponseData
 
         let expectation = XCTestExpectation(description: "Fetch hero list succeeds")
 
@@ -48,7 +40,7 @@ final class HeroServiceTests: XCTestCase {
                     expectation.fulfill()
                 },
                 receiveValue: { response in
-                    XCTAssertEqual(stubbedResponse.data.results.count, response.data.results.count)
+                    XCTAssertEqual(50, response.data.results.count)
                 }
             )
             .store(in: &cancellables)

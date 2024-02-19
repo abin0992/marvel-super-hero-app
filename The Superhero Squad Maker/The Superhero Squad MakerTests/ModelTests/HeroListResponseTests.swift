@@ -37,7 +37,7 @@ final class HeroListResponseTests: XCTestCase {
 
     func testHeroDecoding() {
         let hero = stubbedResponse.data.results.first!
-        XCTAssertEqual(hero.id, 1011334)
+        XCTAssertEqual(hero.id, "1011334")
         XCTAssertEqual(hero.name, "3-D Man")
         XCTAssertEqual(hero.heroDescription, "")
         XCTAssertEqual(hero.thumbnail.path, "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784")
@@ -53,15 +53,15 @@ final class HeroListResponseTests: XCTestCase {
     func testHeroEquatable() {
         let thumbnail = Thumbnail(path: "http://example.com/image", thumbnailExtension: "jpg")
         let hero1 = Hero(
-            id: 1,
-            name: "Hero Name",
+            id: "1",
+            name: "Iromman",
             heroDescription: "Hero Description",
             thumbnail: thumbnail
         )
 
         let hero2 = Hero(
-            id: 1,
-            name: "Hero Name",
+            id: "1",
+            name: "Iromman",
             heroDescription: "Hero Description",
             thumbnail: thumbnail
         )
