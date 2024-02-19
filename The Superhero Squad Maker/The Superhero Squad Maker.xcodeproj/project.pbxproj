@@ -32,7 +32,6 @@
 		16ABD2972B7A7BFA00B14DFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16ABD2962B7A7BFA00B14DFE /* Assets.xcassets */; };
 		16ABD29A2B7A7BFA00B14DFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16ABD2982B7A7BFA00B14DFE /* LaunchScreen.storyboard */; };
 		16ABD2C22B7A7C3000B14DFE /* TextContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2C12B7A7C3000B14DFE /* TextContent.swift */; };
-		16ABD2C92B7A7C8900B14DFE /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2C62B7A7C8900B14DFE /* CGFloat+Extensions.swift */; };
 		16ABD2CA2B7A7C8900B14DFE /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2C72B7A7C8900B14DFE /* Color+Extensions.swift */; };
 		16ABD2CB2B7A7C8900B14DFE /* Image+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2C82B7A7C8900B14DFE /* Image+Extensions.swift */; };
 		16ABD2D12B7A7CEE00B14DFE /* SquadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2CE2B7A7CEE00B14DFE /* SquadButton.swift */; };
@@ -126,7 +125,6 @@
 		16ABD29B2B7A7BFA00B14DFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16ABD2A02B7A7BFA00B14DFE /* The Superhero Squad MakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The Superhero Squad MakerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16ABD2C12B7A7C3000B14DFE /* TextContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextContent.swift; sourceTree = "<group>"; };
-		16ABD2C62B7A7C8900B14DFE /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 		16ABD2C72B7A7C8900B14DFE /* Color+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		16ABD2C82B7A7C8900B14DFE /* Image+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+Extensions.swift"; sourceTree = "<group>"; };
 		16ABD2CE2B7A7CEE00B14DFE /* SquadButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquadButton.swift; sourceTree = "<group>"; };
@@ -392,7 +390,6 @@
 			isa = PBXGroup;
 			children = (
 				16ABD32F2B7BADDE00B14DFE /* Array+Extensions.swift */,
-				16ABD2C62B7A7C8900B14DFE /* CGFloat+Extensions.swift */,
 				16ABD2C72B7A7C8900B14DFE /* Color+Extensions.swift */,
 				16ABD2C82B7A7C8900B14DFE /* Image+Extensions.swift */,
 				1611FDCC2B810B77006A6A78 /* Notification+Name.swift */,
@@ -836,7 +833,6 @@
 				16ABD33E2B7BD1A600B14DFE /* ImageFromUrlView.swift in Sources */,
 				16ABD32E2B7B9DD100B14DFE /* ImageEndpoint.swift in Sources */,
 				16ABF4E82B7E660C0081E59B /* HeroPersistenceManager.swift in Sources */,
-				16ABD2C92B7A7C8900B14DFE /* CGFloat+Extensions.swift in Sources */,
 				16ABD3292B7AC85B00B14DFE /* FullScreenLoadingView.swift in Sources */,
 				16ABD31B2B7ABAE500B14DFE /* HeroService.swift in Sources */,
 				1611FDC02B7FC107006A6A78 /* FetchSquadUseCase.swift in Sources */,

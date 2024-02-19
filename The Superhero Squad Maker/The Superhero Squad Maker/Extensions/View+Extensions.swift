@@ -15,7 +15,7 @@ extension View {
                 Button {
                     action()
                 } label: {
-                    Image("back-button")
+                    Image.backButtonImage
                         .tint(Color.accentColor)
                 }
             }
