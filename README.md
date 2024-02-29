@@ -15,7 +15,10 @@ Resources
 * [Marvel API Reference](https://developer.marvel.com/docs)
 * [Marvel API Auth Guide](https://developer.marvel.com/documentation/authorization)
 
-![Plum task overview](https://i.imgur.com/lDBAHuv.png)
+Task overview
+
+<img width="877" alt="Screenshot 2024-02-29 at 11 07 39" src="https://github.com/abin0992/marvel-super-hero-app/assets/10430402/23de8a0d-a7bf-4b75-b48d-e927a0bc0086">
+
 
 Disclaimer
 ----------
